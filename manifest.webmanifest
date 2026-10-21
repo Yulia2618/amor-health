@@ -1,12 +1,13 @@
 {
   "name": "Амор — дневник здоровья",
   "short_name": "Амор",
-  "description": "Дневник питания и здоровья Кости",
+  "description": "Личный дневник здоровья",
+  "lang": "ru",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#08111d",
-  "theme_color": "#08111d",
+  "background_color": "#f7f8fd",
+  "theme_color": "#f7f8fd",
   "icons": [
     {
       "src": "icon-192.png",
