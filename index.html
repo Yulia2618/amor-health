@@ -242,6 +242,7 @@ body:has(#theme-toggle:checked) .bottom{background:rgba(11,21,38,.91)}
 .builder-saved{margin-top:18px;border-top:1px solid var(--line);padding-top:14px}
 .builder-saved button{display:block;width:100%;text-align:left;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--text);padding:11px 0;cursor:pointer}
 @media(max-width:650px){.builder-row{grid-template-columns:repeat(5,minmax(0,1fr)) 26px;gap:4px;padding:8px 0;border-bottom:1px solid var(--line)}.builder-row label:first-child{grid-column:1/-1}.builder-row label{font-size:9px}.builder-row input{padding:8px 3px;font-size:11px}}
+ .quick-web-status{font-size:12px;color:var(--muted);margin:7px 0 10px;line-height:1.5}
 </style>
 <style>
 /* Amor 17: fast entry, non-blocking estimate with explicit uncertainty */
@@ -256,7 +257,15 @@ body:has(#theme-toggle:checked) .bottom{background:rgba(11,21,38,.91)}
 .quick-badge{color:var(--green);font-weight:700;font-size:12px}
 .quick-small{font-size:11px;color:var(--muted);line-height:1.55}
 </style>
-</head><body><div class="app"><div class="top"><div><div class="hello" id="greeting">Доброе утро! 🌷</div><div class="date" id="date"></div></div><div class="actions"><input aria-label="Ночная тема" id="theme-toggle" style="position:absolute;opacity:0;width:1px;height:1px" type="checkbox"/><label class="iconbtn theme-switch" for="theme-toggle" title="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></label><button class="iconbtn" onclick="alert('Настройки добавим на следующем этапе')" title="Настройки">☰</button></div></div>
+<style>
+.quick-web-results{display:grid;gap:7px;margin:7px 0 12px;max-height:245px;overflow:auto}
+.quick-web-results[hidden]{display:none}
+.quick-web-choice{width:100%;display:flex;align-items:center;gap:10px;text-align:left;padding:9px;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:12px;cursor:pointer}
+.quick-web-choice img{width:48px;height:48px;border-radius:9px;object-fit:contain;background:white}
+.quick-web-choice span{flex:1;min-width:0;font-size:12px;line-height:1.45}
+.quick-web-choice small{display:block;color:var(--muted);font-size:10px}
+.quick-web-note{font-size:11px;color:var(--muted);line-height:1.5}
+</style></head><body><div class="app"><div class="top"><div><div class="hello" id="greeting">Доброе утро! 🌷</div><div class="date" id="date"></div></div><div class="actions"><input aria-label="Ночная тема" id="theme-toggle" style="position:absolute;opacity:0;width:1px;height:1px" type="checkbox"/><label class="iconbtn theme-switch" for="theme-toggle" title="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></label><button class="iconbtn" onclick="alert('Настройки добавим на следующем этапе')" title="Настройки">☰</button></div></div>
 <section class="screen active" id="home"><div aria-label="Утверждённый иллюстративный баннер Кости и Амора" class="hero-reference" role="img"><img alt="Костя и Амор, светлая тема" class="hero-light" src="amor_hero_light.jpg"/><img alt="Костя и Амор, ночная тема" class="hero-dark" src="amor_hero_dark.jpg"/></div><div class="grid vitals-grid">
 <div class="card metric metric-weight"><div class="metric-head"><span class="metric-icon">⚖</span><span class="metric-name">Вес</span></div><div class="metric-main"><span id="weightDisplay">95,65</span><small> кг</small></div><div class="metric-bottom"><div><div class="metric-change">↘ −350 г</div><div class="metric-detail">демо · вчера 96,00 кг</div></div><svg aria-hidden="true" class="metric-visual" viewbox="0 0 125 65"><path d="M2 12 L17 25 L32 28 L45 36 L60 36 L72 45 L89 46 L103 53 L121 56" fill="none" stroke="#22b455" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8"></path><circle cx="121" cy="56" fill="#22b455" r="5"></circle></svg></div><div class="spark" hidden="" id="weightSpark"></div></div>
 <div class="card metric metric-waist"><div class="metric-head"><span class="metric-icon">▤</span><span class="metric-name">Талия</span></div><div class="metric-main"><span id="waistDisplay">101</span><small> см</small></div><div class="metric-bottom"><div><div class="metric-change">↗ +2 см</div><div class="metric-detail">демо · вчера 99 см</div></div><svg aria-hidden="true" class="metric-visual" viewbox="0 0 125 65"><path d="M2 56 L18 43 L35 43 L49 34 L64 34 L77 24 L92 24 L106 13 L121 10" fill="none" stroke="#983de9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8"></path><circle cx="121" cy="10" fill="#983de9" r="5"></circle></svg></div><div class="spark" hidden="" id="waistSpark"></div></div>
@@ -291,16 +300,18 @@ body:has(#theme-toggle:checked) .bottom{background:rgba(11,21,38,.91)}
  <label>Порция, г<input id="quickGrams" type="number" min="1" max="3000" step="1" value="250"></label>
  <label>Приём пищи<select id="quickType"><option>Завтрак</option><option selected>Обед</option><option>Ужин</option><option>Перекус</option><option>Полдник</option><option>Другой</option></select></label>
  </div>
+ <div class="quick-web-status" id="quickWebStatus" aria-live="polite">Начни вводить название — поиск запустится автоматически</div>
+ <div id="quickWebResults" class="quick-web-results" hidden></div>
  <div id="quickResult" class="quick-result" aria-live="polite">Напиши название блюда и вес порции.</div>
  <button type="button" id="quickSave" class="food-primary" style="width:100%">Добавить в дневник</button>
- <p class="quick-small">Амор показывает <b>приблизительный расчёт</b> по типовым домашним блюдам. Это не точная калорийность вашего рецепта: масло, соус и пропорции влияют на результат. Для точного учёта сохрани рецепт в конструкторе.</p>
+ <p class="quick-small">Амор использует <b>ориентировочные значения</b> для домашних блюд или пищевую ценность выбранного продукта из Open Food Facts. Это не точная калорийность вашего рецепта: масло, соус и пропорции влияют на результат. Для точного учёта сохрани рецепт в конструкторе.</p>
 </dialog>
 <dialog id="foodBuilderDialog" class="food-dialog food-builder-dialog"><div class="food-dialog-head"><h3>🥘 Домашний рецепт</h3><button type="button" class="food-x" id="foodBuilderClose">✕</button></div><p class="food-help">Введи ингредиенты и их массу <b>до приготовления</b>, затем вес готового блюда и порцию Кости. Значения на 100 г можно проверить и исправить.</p><label>Название рецепта<input id="builderName" maxlength="120" placeholder="Индейка с гречкой"/></label><div class="food-form-grid"><label>Вес готового блюда, г<input id="builderYield" type="number" min="1" step="1" placeholder="Например, 900"/></label><label>Порция Кости, г<input id="builderPortion" type="number" min="1" step="1" placeholder="Например, 280"/></label></div><div class="builder-ingredients"><div class="builder-head"><strong>Ингредиенты</strong><button id="builderAdd" type="button">＋ Ингредиент</button></div><div id="builderRows"></div></div><div class="builder-result" id="builderResult" aria-live="polite">Добавь ингредиенты для расчёта</div><div class="food-dialog-actions"><button type="button" class="food-delete" id="builderSaveRecipe">♡ Сохранить рецепт</button><button type="button" class="food-primary" id="builderApply">В дневник →</button></div><p class="food-help">Расчёт ориентировочный. Вода не добавляет калорий, но меняет массу готового блюда. Масло, соусы и другие добавки учитывай отдельно. Данные сохраняются только на этом устройстве.</p><div class="builder-saved"><strong>Мои рецепты</strong><div id="builderSavedList"></div></div></dialog><dialog id="foodEntryDialog" class="food-dialog"><form id="foodEntryForm"><div class="food-dialog-head"><h3 id="foodEntryDialogTitle">Добавить приём пищи</h3><button type="button" class="food-x" data-close="foodEntryDialog">✕</button></div><label>Тип приёма пищи<select id="foodEntryType"><option>Завтрак</option><option>Обед</option><option>Ужин</option><option>Перекус</option><option>Полдник</option><option>Другой</option></select></label><button type="button" id="quickFromManual" class="quick-open">⚡ Быстрый расчёт по названию и граммам →</button><button type="button" id="foodRecipeBuilderOpen" class="food-builder-open">🥘 Рассчитать по домашнему рецепту и порции →</button><label>Название блюда<input id="foodEntryName" maxlength="120" required placeholder="Например, рис с индейкой"/></label><div class="food-form-grid"><label>Время<input type="time" id="foodEntryTime" required/></label><label>Калории, ккал<input type="number" min="0" max="10000" step="1" id="foodEntryKcal" required placeholder="0"/></label><label>Белки, г<input type="number" min="0" max="1000" step="0.1" id="foodEntryProtein" required placeholder="0"/></label><label>Жиры, г<input type="number" min="0" max="1000" step="0.1" id="foodEntryFat" required placeholder="0"/></label><label>Углеводы, г<input type="number" min="0" max="1000" step="0.1" id="foodEntryCarbs" required placeholder="0"/></label><label>ЖКТ после еды<select id="foodEntryGut"><option value="">Не отмечено</option><option>Хорошо</option><option>Небольшой дискомфорт</option><option>Боль</option><option>Вздутие</option><option>Тяжесть</option></select></label></div><div class="food-dialog-actions"><button type="button" id="foodEntryDelete" class="food-delete" hidden>Удалить</button><button type="submit" class="food-primary">Сохранить</button></div><p class="food-help">КБЖУ можно рассчитать по рецепту и порции или изменить вручную. Данные сохраняются только в этом браузере.</p></form></dialog>
  <dialog id="foodGoalDialog" class="food-dialog"><form id="foodGoalForm"><div class="food-dialog-head"><h3>Цели на день</h3><button type="button" class="food-x" data-close="foodGoalDialog">✕</button></div><p class="food-help">Это редактируемые ориентиры, а не медицинская рекомендация.</p><div class="food-form-grid"><label>Калории, ккал<input id="foodGoalKcal" type="number" min="1" max="10000" required/></label><label>Белки, г<input id="foodGoalProtein" type="number" min="1" max="1000" required/></label><label>Жиры, г<input id="foodGoalFat" type="number" min="1" max="1000" required/></label><label>Углеводы, г<input id="foodGoalCarbs" type="number" min="1" max="1000" required/></label></div><button class="food-primary" type="submit">Сохранить цели</button></form></dialog>
  </section>
 <section class="screen" id="basket"><div class="section">🛒 Корзина</div><p class="intro">Покупки и запасы продуктов в одном месте</p><div class="banner">🤖 Амор поможет ничего не забыть!</div><div class="card"><strong>Нужно купить</strong><div id="shopping"><label class="item"><input type="checkbox"/> Огурцы</label><label class="item"><input type="checkbox"/> Авокадо</label><label class="item"><input type="checkbox"/> Безлактозное молоко</label></div><div class="row" style="margin-top:15px"><input id="newItem" placeholder="Добавить продукт" style="min-width:0;flex:1;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text)"/><button class="iconbtn" id="add">＋</button></div></div></section>
 <section class="screen" id="analytics"><div class="section">📊 Аналитика</div><p class="intro">Ваш прогресс и статистика</p><div class="card"><strong>Самочувствие и состояние ЖКТ</strong><p class="intro">В будущей версии здесь появятся графики на основе ежедневных записей.</p><div class="bar"><div class="fill" style="width:65%"></div></div><div class="row"><span class="muted">Неделя</span><span class="pill">Демо-режим</span></div></div><div class="section">История измерений</div><div class="card"><div class="intro" id="historyVitals">Здесь появятся сохранённые записи.</div></div><div class="section">Динамика тела</div><div class="grid"><div class="card metric"><div class="label">Вес</div><div class="value" id="analyticsWeight">95,65 кг</div><div class="spark" id="analyticsWeightSpark"></div></div><div class="card metric"><div class="label">Талия</div><div class="value" id="analyticsWaist">101 см</div><div class="spark" id="analyticsWaistSpark"></div></div></div><div class="section">Графики измерений</div><div class="card"><strong>⚖️ Вес по датам</strong><div class="chart" id="weightChart"></div></div><div class="card" style="margin-top:12px"><strong>📏 Талия по датам</strong><div class="chart" id="waistChart"></div></div><div class="card" style="margin-top:12px"><strong>🌙 Сон по датам</strong><div class="chart" id="sleepChart"></div></div><div class="card" style="margin-top:12px"><strong>😊 Самочувствие по датам</strong><div class="chart" id="moodChart"></div></div></section>
-<section class="screen" id="diary"><div class="section">📖 Дневник</div><p class="intro">Записывай важное о самочувствии каждый день.</p><div class="card"><label for="note"><strong>Как прошёл день?</strong></label><textarea id="note" placeholder="Самочувствие, сон, питание, настроение…" rows="7" style="margin-top:12px;width:100%;border:1px solid var(--line);border-radius:12px;padding:12px;background:var(--bg);color:var(--text);font:inherit;resize:vertical"></textarea><p class="muted">Запись сохраняется на этом устройстве автоматически.</p></div></section><p class="demo">Версия 17 • Signature Edition • оформление по утверждённому макету • показатели ЖКТ и нижних карточек демонстрационные</p></div>
+<section class="screen" id="diary"><div class="section">📖 Дневник</div><p class="intro">Записывай важное о самочувствии каждый день.</p><div class="card"><label for="note"><strong>Как прошёл день?</strong></label><textarea id="note" placeholder="Самочувствие, сон, питание, настроение…" rows="7" style="margin-top:12px;width:100%;border:1px solid var(--line);border-radius:12px;padding:12px;background:var(--bg);color:var(--text);font:inherit;resize:vertical"></textarea><p class="muted">Запись сохраняется на этом устройстве автоматически.</p></div></section><p class="demo">Версия 19 • Signature Edition • оформление по утверждённому макету • показатели ЖКТ и нижних карточек демонстрационные</p></div>
 <div style="position:absolute;left:-9999px"><input checked="" id="tab-home" name="tab" type="radio"/><input id="tab-food" name="tab" type="radio"/><input id="tab-basket" name="tab" type="radio"/><input id="tab-analytics" name="tab" type="radio"/><input id="tab-diary" name="tab" type="radio"/></div><div class="bottom"><div class="nav"><label for="tab-home"><span>⌂</span>Сегодня</label><label for="tab-food"><span>♧</span>Питание</label><label for="tab-basket"><span>🛒</span>Корзина</label><label for="tab-analytics"><span>▥</span>Аналитика</label><label for="tab-diary"><span>▤</span>Дневник</label></div></div><script>
 const $=s=>document.querySelector(s);const store=(k,v)=>{try{localStorage.setItem('amor_'+k,JSON.stringify(v))}catch(e){}};const load=(k,d)=>{try{return JSON.parse(localStorage.getItem('amor_'+k))??d}catch(e){return d}};const themeToggle=$('#theme-toggle');themeToggle.checked=load('theme','light')==='dark';themeToggle.addEventListener('change',()=>store('theme',themeToggle.checked?'dark':'light'));$('#date').textContent=new Intl.DateTimeFormat('ru-RU',{weekday:'long',day:'numeric',month:'long'}).format(new Date());const h=new Date().getHours();$('#greeting').textContent=h<11?'Доброе утро! 🌷':h<18?'Добрый день! 🌿':'Добрый вечер! 🌙';document.querySelectorAll('input[name=tab]').forEach(r=>r.addEventListener('change',()=>window.scrollTo(0,0)));const day=new Date().toLocaleDateString('sv-SE');document.querySelectorAll('[data-key]').forEach(el=>{let k=day+'_'+el.dataset.key;el.checked=load(k,false);el.onchange=()=>store(k,el.checked)});let shopping=load('shopping',[{name:'Огурцы',done:false},{name:'Авокадо',done:false},{name:'Безлактозное молоко',done:false}]);function draw(){ $('#shopping').innerHTML='';shopping.forEach((x,i)=>{let label=document.createElement('label');label.className='item';let cb=document.createElement('input');cb.type='checkbox';cb.checked=x.done;cb.onchange=()=>{x.done=cb.checked;store('shopping',shopping)};let span=document.createElement('strong');span.textContent=x.name;label.append(cb,span);$('#shopping').append(label)})}draw();$('#add').onclick=()=>{let v=$('#newItem').value.trim();if(v){shopping.push({name:v,done:false});store('shopping',shopping);$('#newItem').value='';draw()}};$('#note').value=load('note_'+day,'');$('#note').oninput=e=>store('note_'+day,e.target.value);
 function fmt(v){return String(v).replace('.',',')}
@@ -438,7 +449,7 @@ function render(){
  $('foodTotalNote').textContent=rows.length?'Записано приёмов пищи: '+rows.length:'День ещё не заполнен';
  const host=$('foodEntries');host.innerHTML='';
  if(!rows.length){host.innerHTML='<div class="food-empty"><span>🍽️</span><strong>Пока нет записей</strong><p>Добавь завтрак, обед или любой другой приём пищи. Пять раз в день есть не обязательно.</p><button type="button" id="foodEmptyAdd">＋ Добавить первый приём пищи</button></div>';$('foodEmptyAdd').onclick=()=>openEntry();return}
- rows.forEach(x=>{const btn=document.createElement('button');btn.type='button';btn.className='food-entry';const pic=x.name.toLowerCase().includes('цезар')?'<img class="food-entry-art" src="caesar_batat.jpg" alt="Салат с курицей"/>':'';btn.innerHTML=`<span class="food-entry-symbol">${icons[x.type]||'🍽'}</span><span class="food-entry-main"><span class="food-entry-head"><strong>${esc(x.type)}</strong><time>${esc(x.time)}</time></span><span class="food-entry-name">${esc(x.name)}</span><span class="food-entry-bottom"><span class="food-entry-cal">${pretty(x.kcal)} ккал</span>${x.gut?`<span class="food-entry-gut">ЖКТ: ${esc(x.gut)}</span>`:''}</span></span>${pic}<span class="food-entry-arrow">›</span>`;btn.onclick=()=>openEntry(x);host.append(btn)});
+ rows.forEach(x=>{const btn=document.createElement('button');btn.type='button';btn.className='food-entry';const pic=x.image&&/^https:\/\//.test(x.image)?'<img class="food-entry-art" src="'+esc(x.image)+'" alt="Фото продукта" loading="lazy"/>':x.name.toLowerCase().includes('цезар')?'<img class="food-entry-art" src="caesar_batat.jpg" alt="Салат с курицей"/>':'';btn.innerHTML=`<span class="food-entry-symbol">${icons[x.type]||'🍽'}</span><span class="food-entry-main"><span class="food-entry-head"><strong>${esc(x.type)}</strong><time>${esc(x.time)}</time></span><span class="food-entry-name">${esc(x.name)}</span><span class="food-entry-bottom"><span class="food-entry-cal">${pretty(x.kcal)} ккал</span>${x.gut?`<span class="food-entry-gut">ЖКТ: ${esc(x.gut)}</span>`:''}</span></span>${pic}<span class="food-entry-arrow">›</span>`;btn.onclick=()=>openEntry(x);host.append(btn)});
 }
 function openEntry(x){editId=x?.id??null;$('foodEntryDialogTitle').textContent=x?'Редактировать приём пищи':'Добавить приём пищи';$('foodEntryDelete').hidden=!x;
  $('foodEntryType').value=x?.type||'Обед';$('foodEntryName').value=x?.name||'';$('foodEntryTime').value=x?.time||new Date().toTimeString().slice(0,5);
@@ -519,7 +530,7 @@ $('builderApply').onclick=()=>{calculate();if(!computed||!computed.name){alert('
  {words:['огур'],title:'Огурец',k:15,p:.7,f:.1,c:3.6},
  {words:['помид'],title:'Помидор',k:18,p:.9,f:.2,c:3.9}
  ];
- let selected=null, sourceManual=false;
+ let selected=null, sourceManual=false, webChoice=null, webResults=[], webRequest=0, webTimer=null;
  function guess(n){
    const x=n.toLowerCase().replace(/ё/g,'е').trim();
    const candidates=types.filter(t=>t.words.every(w=>x.includes(w))).sort((a,b)=>b.words.length-a.words.length);
@@ -528,30 +539,67 @@ $('builderApply').onclick=()=>{calculate();if(!computed||!computed.name){alert('
  const rnd=n=>Math.round(n*10)/10;
  function recalc(){
   const name=$('quickName').value.trim(),g=Number($('quickGrams').value),box=$('quickResult');
-  selected=guess(name);
+  selected=webChoice||guess(name);
   if(!name||!Number.isFinite(g)||g<=0||g>3000){box.textContent='Укажи название блюда и вес порции от 1 до 3000 г.';$('quickSave').disabled=true;return}
   if(!selected){box.innerHTML='<span class="quick-badge">Нет надёжного совпадения</span><small>Для этого блюда нужен состав или сохранённый рецепт. Не будем придумывать КБЖУ.</small>';$('quickSave').disabled=true;return}
-  const v=calc(g);box.innerHTML='<span class="quick-badge">≈ Ориентировочно · '+selected.title+'</span><strong>'+v.kcal+' ккал</strong><small>Б '+v.protein+' г · Ж '+v.fat+' г · У '+v.carbs+' г<br>На основе типового состава, не вашего точного рецепта</small>';$('quickSave').disabled=false;
+  const v=calc(g);box.innerHTML='<span class="quick-badge">'+(webChoice?'Из базы Open Food Facts':'≈ Ориентировочно')+' · '+selected.title+'</span><strong>'+v.kcal+' ккал</strong><small>Б '+v.protein+' г · Ж '+v.fat+' г · У '+v.carbs+' г<br>'+(webChoice?'Показатели с этикетки выбранного продукта, на 100 г':'Типовой состав, не ваш точный рецепт')+'</small>';$('quickSave').disabled=false;
  }
  function calc(g){return {kcal:rnd(selected.k*g/100),protein:rnd(selected.p*g/100),fat:rnd(selected.f*g/100),carbs:rnd(selected.c*g/100)}}
  function open(fromManual=false){
   sourceManual=fromManual;
   if(fromManual){$('quickName').value=$('foodEntryName').value||'';$('foodEntryDialog').close()}
   else $('quickName').value='';
-  $('quickGrams').value=250;
+  $('quickGrams').value=250;webChoice=null;$('quickWebResults').hidden=true; $('quickWebStatus').textContent='Начни вводить название — поиск запустится автоматически';
   $('quickDialog').showModal();recalc();$('quickName').focus();
  }
  $('quickTopOpen').onclick=()=>open();
  $('quickFromManual').onclick=()=>open(true);
  $('quickClose').onclick=()=>{ $('quickDialog').close();if(sourceManual)$('foodEntryDialog').showModal()};
- ['quickName','quickGrams'].forEach(id=>$(id).addEventListener('input',recalc));
+ $('quickName').addEventListener('input',()=>{
+  webChoice=null;webRequest++;clearTimeout(webTimer);$('quickWebResults').hidden=true;recalc();
+  const q=$('quickName').value.trim();
+  if(q.length>=3){$('quickWebStatus').textContent='Ищем совпадения…';webTimer=setTimeout(()=>searchProducts(q),550)}
+  else $('quickWebStatus').textContent='Введи хотя бы 3 буквы — поиск начнётся автоматически';
+ });$('quickGrams').addEventListener('input',recalc);
+
+ // Optional live product lookup. No keys or user data are sent except the typed query.
+ async function searchProducts(query){
+  const host=$('quickWebResults');
+  if(query.length<3)return;
+  const request=++webRequest;host.hidden=false;host.textContent='Ищем продукты…';
+  try{
+   const u=new URL('https://world.openfoodfacts.org/cgi/search.pl');
+   u.searchParams.set('search_terms',query);u.searchParams.set('search_simple','1');u.searchParams.set('action','process');u.searchParams.set('json','1');u.searchParams.set('page_size','12');u.searchParams.set('fields','product_name,product_name_ru,nutriments,image_front_small_url,brands');
+   const response=await fetch(u.toString(),{headers:{Accept:'application/json'}});
+   if(!response.ok)throw Error('HTTP '+response.status);
+   const data=await response.json();if(request!==webRequest)return;
+   const items=(data.products||[]).map(p=>{
+    const n=p.nutriments||{},k=Number(n['energy-kcal_100g']),protein=Number(n.proteins_100g),fat=Number(n.fat_100g),carbs=Number(n.carbohydrates_100g);
+    const title=String(p.product_name_ru||p.product_name||'').trim();
+    if(!title||![k,protein,fat,carbs].every(Number.isFinite)||k<=0||k>900||[protein,fat,carbs].some(x=>x<0||x>100))return null;
+    return {title,k,p:protein,f:fat,c:carbs,image:/^https:\/\//.test(p.image_front_small_url||'')?p.image_front_small_url:''};
+   }).filter(Boolean).slice(0,8);
+   host.replaceChildren();
+   if(!items.length){host.textContent='Подходящих продуктов с полным КБЖУ не найдено. Используй местную оценку или конструктор рецептов.';$('quickWebStatus').textContent='Нет точного совпадения';return}
+   $('quickWebStatus').textContent='Найдено '+items.length+' вариантов — выбери подходящий продукт';
+   const note=document.createElement('p');note.className='quick-web-note';note.textContent='Выбери подходящий продукт. Значения с этикетки; домашний рецепт может отличаться.';host.append(note);
+   items.forEach(item=>{
+    const b=document.createElement('button');b.type='button';b.className='quick-web-choice';
+    if(item.image){const img=document.createElement('img');img.src=item.image;img.alt='Фото упаковки';img.loading='lazy';b.append(img)}
+    const span=document.createElement('span');span.textContent=item.title;
+    const small=document.createElement('small');small.textContent=Math.round(item.k)+' ккал / 100 г · Б '+item.p+' · Ж '+item.f+' · У '+item.c;
+    span.append(small);b.append(span);
+    b.onclick=()=>{webChoice=item;host.hidden=true;$('quickWebStatus').textContent='✓ Выбрано: '+item.title;recalc()};host.append(b);
+   });
+  }catch(e){if(request===webRequest){host.textContent='Поиск сейчас недоступен. Можно воспользоваться местной оценкой или конструктором рецептов.';$('quickWebStatus').textContent='Поиск временно недоступен'}}
+ }
  $('quickSave').onclick=()=>{
   const name=$('quickName').value.trim(),g=Number($('quickGrams').value);recalc();
   if(!selected||!name||!(g>0&&g<=3000))return;
   const day=$('foodDate').value, key='amor_food_entries_'+day;
   let rows;try{rows=JSON.parse(localStorage.getItem(key)||'[]');if(!Array.isArray(rows))rows=[]}catch(e){rows=[]}
   const vals=calc(g);
-  rows.push({...vals,id:String(Date.now())+Math.random().toString(36).slice(2,7),name,type:$('quickType').value,time:new Date().toTimeString().slice(0,5),gut:'',grams:g,estimate:true,estimateSource:selected.title});
+  rows.push({...vals,image:webChoice?.image||'',source:webChoice?'Open Food Facts':'Локальная оценка',id:String(Date.now())+Math.random().toString(36).slice(2,7),name,type:$('quickType').value,time:new Date().toTimeString().slice(0,5),gut:'',grams:g,estimate:!webChoice,estimateSource:selected.title});
   try{localStorage.setItem(key,JSON.stringify(rows))}catch(e){alert('Не удалось сохранить запись.');return}
   $('quickDialog').close();
   // Re-render the existing diary without replacing any of its functionality.
