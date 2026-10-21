@@ -1,4 +1,4 @@
-const CACHE='amor-v24-offline';
+const CACHE='amor-v25-offline';
 const ASSETS=['./','./index.html','./manifest.webmanifest','./icon-192.png','./icon-512.png','./amor_hero_dark.jpg','./amor_hero_light.jpg','./amor_wave.png','./caesar_batat.jpg'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('amor-v')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
