@@ -271,7 +271,7 @@ body:has(#theme-toggle:checked) .bottom{background:rgba(11,21,38,.91)}
 .quick-image-fallback img{width:100%;height:100%;object-fit:cover;display:block}
 .food-image-fallback{display:flex!important;align-items:center;justify-content:center;background:linear-gradient(145deg,rgba(46,189,119,.16),rgba(69,110,168,.12));font-size:27px;border-radius:14px}
 </style>
-</head><body><div class="app"><div class="top"><div><div class="hello" id="greeting">Доброе утро! 🌷</div><div class="date" id="date"></div></div><div class="actions"><input aria-label="Ночная тема" id="theme-toggle" style="position:absolute;opacity:0;width:1px;height:1px" type="checkbox"/><label class="iconbtn theme-switch" for="theme-toggle" title="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></label><button class="iconbtn" onclick="alert('Настройки добавим на следующем этапе')" title="Настройки">☰</button></div></div>
+<link rel="manifest" href="manifest.webmanifest"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Амор"></head><body><div class="app"><div class="top"><div><div class="hello" id="greeting">Доброе утро! 🌷</div><div class="date" id="date"></div></div><div class="actions"><input aria-label="Ночная тема" id="theme-toggle" style="position:absolute;opacity:0;width:1px;height:1px" type="checkbox"/><label class="iconbtn theme-switch" for="theme-toggle" title="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></label><button class="iconbtn" onclick="alert('Настройки добавим на следующем этапе')" title="Настройки">☰</button></div></div>
 <section class="screen active" id="home"><div aria-label="Утверждённый иллюстративный баннер Кости и Амора" class="hero-reference" role="img"><img alt="Костя и Амор, светлая тема" class="hero-light" src="amor_hero_light.jpg"/><img alt="Костя и Амор, ночная тема" class="hero-dark" src="amor_hero_dark.jpg"/></div><div class="grid vitals-grid">
 <div class="card metric metric-weight"><div class="metric-head"><span class="metric-icon">⚖</span><span class="metric-name">Вес</span></div><div class="metric-main"><span id="weightDisplay">95,65</span><small> кг</small></div><div class="metric-bottom"><div><div class="metric-change">↘ −350 г</div><div class="metric-detail">демо · вчера 96,00 кг</div></div><svg aria-hidden="true" class="metric-visual" viewbox="0 0 125 65"><path d="M2 12 L17 25 L32 28 L45 36 L60 36 L72 45 L89 46 L103 53 L121 56" fill="none" stroke="#22b455" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8"></path><circle cx="121" cy="56" fill="#22b455" r="5"></circle></svg></div><div class="spark" hidden="" id="weightSpark"></div></div>
 <div class="card metric metric-waist"><div class="metric-head"><span class="metric-icon">▤</span><span class="metric-name">Талия</span></div><div class="metric-main"><span id="waistDisplay">101</span><small> см</small></div><div class="metric-bottom"><div><div class="metric-change">↗ +2 см</div><div class="metric-detail">демо · вчера 99 см</div></div><svg aria-hidden="true" class="metric-visual" viewbox="0 0 125 65"><path d="M2 56 L18 43 L35 43 L49 34 L64 34 L77 24 L92 24 L106 13 L121 10" fill="none" stroke="#983de9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8"></path><circle cx="121" cy="10" fill="#983de9" r="5"></circle></svg></div><div class="spark" hidden="" id="waistSpark"></div></div>
@@ -317,7 +317,7 @@ body:has(#theme-toggle:checked) .bottom{background:rgba(11,21,38,.91)}
  </section>
 <section class="screen" id="basket"><div class="section">🛒 Корзина</div><p class="intro">Покупки и запасы продуктов в одном месте</p><div class="banner">🤖 Амор поможет ничего не забыть!</div><div class="card"><strong>Нужно купить</strong><div id="shopping"><label class="item"><input type="checkbox"/> Огурцы</label><label class="item"><input type="checkbox"/> Авокадо</label><label class="item"><input type="checkbox"/> Безлактозное молоко</label></div><div class="row" style="margin-top:15px"><input id="newItem" placeholder="Добавить продукт" style="min-width:0;flex:1;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text)"/><button class="iconbtn" id="add">＋</button></div></div></section>
 <section class="screen" id="analytics"><div class="section">📊 Аналитика</div><p class="intro">Ваш прогресс и статистика</p><div class="card"><strong>Самочувствие и состояние ЖКТ</strong><p class="intro">В будущей версии здесь появятся графики на основе ежедневных записей.</p><div class="bar"><div class="fill" style="width:65%"></div></div><div class="row"><span class="muted">Неделя</span><span class="pill">Демо-режим</span></div></div><div class="section">История измерений</div><div class="card"><div class="intro" id="historyVitals">Здесь появятся сохранённые записи.</div></div><div class="section">Динамика тела</div><div class="grid"><div class="card metric"><div class="label">Вес</div><div class="value" id="analyticsWeight">95,65 кг</div><div class="spark" id="analyticsWeightSpark"></div></div><div class="card metric"><div class="label">Талия</div><div class="value" id="analyticsWaist">101 см</div><div class="spark" id="analyticsWaistSpark"></div></div></div><div class="section">Графики измерений</div><div class="card"><strong>⚖️ Вес по датам</strong><div class="chart" id="weightChart"></div></div><div class="card" style="margin-top:12px"><strong>📏 Талия по датам</strong><div class="chart" id="waistChart"></div></div><div class="card" style="margin-top:12px"><strong>🌙 Сон по датам</strong><div class="chart" id="sleepChart"></div></div><div class="card" style="margin-top:12px"><strong>😊 Самочувствие по датам</strong><div class="chart" id="moodChart"></div></div></section>
-<section class="screen" id="diary"><div class="section">📖 Дневник</div><p class="intro">Записывай важное о самочувствии каждый день.</p><div class="card"><label for="note"><strong>Как прошёл день?</strong></label><textarea id="note" placeholder="Самочувствие, сон, питание, настроение…" rows="7" style="margin-top:12px;width:100%;border:1px solid var(--line);border-radius:12px;padding:12px;background:var(--bg);color:var(--text);font:inherit;resize:vertical"></textarea><p class="muted">Запись сохраняется на этом устройстве автоматически.</p></div></section><p class="demo">Версия 21 • Signature Edition • оформление по утверждённому макету • показатели ЖКТ и нижних карточек демонстрационные</p></div>
+<section class="screen" id="diary"><div class="section">📖 Дневник</div><p class="intro">Записывай важное о самочувствии каждый день.</p><div class="card"><label for="note"><strong>Как прошёл день?</strong></label><textarea id="note" placeholder="Самочувствие, сон, питание, настроение…" rows="7" style="margin-top:12px;width:100%;border:1px solid var(--line);border-radius:12px;padding:12px;background:var(--bg);color:var(--text);font:inherit;resize:vertical"></textarea><p class="muted">Запись сохраняется на этом устройстве автоматически.</p></div></section><p class="demo">Версия 22 • Offline Edition • оформление по утверждённому макету • показатели ЖКТ и нижних карточек демонстрационные</p></div>
 <div style="position:absolute;left:-9999px"><input checked="" id="tab-home" name="tab" type="radio"/><input id="tab-food" name="tab" type="radio"/><input id="tab-basket" name="tab" type="radio"/><input id="tab-analytics" name="tab" type="radio"/><input id="tab-diary" name="tab" type="radio"/></div><div class="bottom"><div class="nav"><label for="tab-home"><span>⌂</span>Сегодня</label><label for="tab-food"><span>♧</span>Питание</label><label for="tab-basket"><span>🛒</span>Корзина</label><label for="tab-analytics"><span>▥</span>Аналитика</label><label for="tab-diary"><span>▤</span>Дневник</label></div></div><script>
 const $=s=>document.querySelector(s);const store=(k,v)=>{try{localStorage.setItem('amor_'+k,JSON.stringify(v))}catch(e){}};const load=(k,d)=>{try{return JSON.parse(localStorage.getItem('amor_'+k))??d}catch(e){return d}};const themeToggle=$('#theme-toggle');themeToggle.checked=load('theme','light')==='dark';themeToggle.addEventListener('change',()=>store('theme',themeToggle.checked?'dark':'light'));$('#date').textContent=new Intl.DateTimeFormat('ru-RU',{weekday:'long',day:'numeric',month:'long'}).format(new Date());const h=new Date().getHours();$('#greeting').textContent=h<11?'Доброе утро! 🌷':h<18?'Добрый день! 🌿':'Добрый вечер! 🌙';document.querySelectorAll('input[name=tab]').forEach(r=>r.addEventListener('change',()=>window.scrollTo(0,0)));const day=new Date().toLocaleDateString('sv-SE');document.querySelectorAll('[data-key]').forEach(el=>{let k=day+'_'+el.dataset.key;el.checked=load(k,false);el.onchange=()=>store(k,el.checked)});let shopping=load('shopping',[{name:'Огурцы',done:false},{name:'Авокадо',done:false},{name:'Безлактозное молоко',done:false}]);function draw(){ $('#shopping').innerHTML='';shopping.forEach((x,i)=>{let label=document.createElement('label');label.className='item';let cb=document.createElement('input');cb.type='checkbox';cb.checked=x.done;cb.onchange=()=>{x.done=cb.checked;store('shopping',shopping)};let span=document.createElement('strong');span.textContent=x.name;label.append(cb,span);$('#shopping').append(label)})}draw();$('#add').onclick=()=>{let v=$('#newItem').value.trim();if(v){shopping.push({name:v,done:false});store('shopping',shopping);$('#newItem').value='';draw()}};$('#note').value=load('note_'+day,'');$('#note').oninput=e=>store('note_'+day,e.target.value);
 function fmt(v){return String(v).replace('.',',')}
@@ -533,6 +533,26 @@ $('builderApply').onclick=()=>{calculate();if(!computed||!computed.name){alert('
  {words:['индейк'],title:'Индейка приготовленная без масла',k:145,p:28,f:3,c:0},
  {words:['куриц'],title:'Куриная грудка приготовленная без масла',k:165,p:31,f:3.6,c:0},
  {words:['батат'],title:'Батат запечённый без масла',k:90,p:2,f:.2,c:21},
+
+ {words:['йогурт'],title:'Йогурт натуральный без добавок (ориентир)',k:65,p:4,f:3.5,c:4.7},
+ {words:['кефир'],title:'Кефир (ориентир)',k:53,p:3,f:2.5,c:4},
+ {words:['творог'],title:'Творог 5% (ориентир)',k:121,p:17,f:5,c:3},
+ {words:['молок'],title:'Молоко 2,5% (ориентир)',k:52,p:3,f:2.5,c:4.7},
+ {words:['хлеб'],title:'Хлеб пшеничный (ориентир)',k:250,p:8,f:3,c:49},
+ {words:['сыр'],title:'Сыр твёрдый (ориентир)',k:350,p:25,f:27,c:1},
+ {words:['картоф'],title:'Картофель варёный',k:86,p:1.7,f:.1,c:20},
+ {words:['морков'],title:'Морковь',k:41,p:.9,f:.2,c:10},
+ {words:['кабач'],title:'Кабачок',k:24,p:.6,f:.3,c:4.6},
+ {words:['броккол'],title:'Брокколи',k:34,p:2.8,f:.4,c:7},
+ {words:['макарон'],title:'Макароны отварные (ориентир)',k:150,p:5,f:1,c:30},
+ {words:['лосос'],title:'Лосось приготовленный без масла',k:206,p:22,f:12,c:0},
+ {words:['рыб'],title:'Нежирная рыба приготовленная',k:110,p:23,f:2,c:0},
+ {words:['масло','олив'],title:'Оливковое масло',k:884,p:0,f:100,c:0},
+ {words:['масло','слив'],title:'Сливочное масло',k:748,p:.5,f:82,c:.8},
+ {words:['груш'],title:'Груша',k:57,p:.4,f:.1,c:15},
+ {words:['апельсин'],title:'Апельсин',k:47,p:.9,f:.1,c:12},
+ {words:['миндал'],title:'Миндаль',k:579,p:21,f:50,c:22},
+ {words:['овсян','каша','молок'],title:'Овсяная каша на молоке (ориентир)',k:105,p:4,f:3.5,c:15},
  {words:['огур'],title:'Огурец',k:15,p:.7,f:.1,c:3.6},
  {words:['помид'],title:'Помидор',k:18,p:.9,f:.2,c:3.9}
  ];
@@ -556,7 +576,7 @@ $('builderApply').onclick=()=>{calculate();if(!computed||!computed.name){alert('
   sourceManual=fromManual;
   if(fromManual){$('quickName').value=$('foodEntryName').value||'';$('foodEntryDialog').close()}
   else $('quickName').value='';
-  $('quickGrams').value=250;webChoice=null;$('quickWebResults').hidden=true; $('quickWebStatus').textContent='Начни вводить название — поиск запустится автоматически';
+  $('quickGrams').value=250;webChoice=null;$('quickWebResults').hidden=true; $('quickWebStatus').textContent=navigator.onLine?'Начни вводить название — поиск запустится автоматически':'Автономный режим · используется встроенный справочник';
   $('quickDialog').showModal();recalc();$('quickName').focus();
  }
  $('quickTopOpen').onclick=()=>open();
@@ -565,14 +585,14 @@ $('builderApply').onclick=()=>{calculate();if(!computed||!computed.name){alert('
  $('quickName').addEventListener('input',()=>{
   webChoice=null;webRequest++;clearTimeout(webTimer);$('quickWebResults').hidden=true;recalc();
   const q=$('quickName').value.trim();
-  if(q.length>=3){$('quickWebStatus').textContent='Ищем совпадения…';webTimer=setTimeout(()=>searchProducts(q),550)}
+  if(q.length>=3 && navigator.onLine){$('quickWebStatus').textContent='Ищем совпадения…';webTimer=setTimeout(()=>searchProducts(q),550)} else if(q.length>=3){$('quickWebStatus').textContent='Без интернета · доступен встроенный справочник'}
   else $('quickWebStatus').textContent='Введи хотя бы 3 буквы — поиск начнётся автоматически';
  });$('quickGrams').addEventListener('input',recalc);
 
  // Optional live product lookup. No keys or user data are sent except the typed query.
  async function searchProducts(query){
   const host=$('quickWebResults');
-  if(query.length<3)return;
+  if(query.length<3||!navigator.onLine)return;
   const request=++webRequest;host.hidden=false;host.textContent='Ищем продукты…';
   try{
    const u=new URL('https://world.openfoodfacts.org/cgi/search.pl');
@@ -606,7 +626,7 @@ $('builderApply').onclick=()=>{calculate();if(!computed||!computed.name){alert('
   const day=$('foodDate').value, key='amor_food_entries_'+day;
   let rows;try{rows=JSON.parse(localStorage.getItem(key)||'[]');if(!Array.isArray(rows))rows=[]}catch(e){rows=[]}
   const vals=calc(g);
-  rows.push({...vals,image:webChoice?.image||'',source:webChoice?'Open Food Facts':'Локальная оценка',id:String(Date.now())+Math.random().toString(36).slice(2,7),name,type:$('quickType').value,time:new Date().toTimeString().slice(0,5),gut:'',grams:g,estimate:!webChoice,estimateSource:selected.title});
+  rows.push({...vals,image:webChoice?.image||'',source:webChoice?'Open Food Facts':'Локальная оценка',id:String(Date.now())+Math.random().toString(36).slice(2,7),name:webChoice?.title||name,type:$('quickType').value,time:new Date().toTimeString().slice(0,5),gut:'',grams:g,estimate:!webChoice,estimateSource:selected.title});
   try{localStorage.setItem(key,JSON.stringify(rows))}catch(e){alert('Не удалось сохранить запись.');return}
   $('quickDialog').close();
   // Re-render the existing diary without replacing any of its functionality.
@@ -630,4 +650,8 @@ document.addEventListener('error',function(e){
  }
 },true);
 </script>
-</body></html>
+<script>
+if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+ window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+}
+</script></body></html>
