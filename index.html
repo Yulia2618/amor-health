@@ -332,7 +332,41 @@ body:has(#theme-toggle:checked) #basket .basket-cook{background:linear-gradient(
 .quick-image-fallback img{width:100%;height:100%;object-fit:cover;display:block}
 .food-image-fallback{display:flex!important;align-items:center;justify-content:center;background:linear-gradient(145deg,rgba(46,189,119,.16),rgba(69,110,168,.12));font-size:27px;border-radius:14px}
 </style>
-<link rel="manifest" href="manifest.webmanifest"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Амор"></head><body><div class="app"><div class="top"><div><div class="hello" id="greeting">Доброе утро! 🌷</div><div class="date" id="date"></div></div><div class="actions"><input aria-label="Ночная тема" id="theme-toggle" style="position:absolute;opacity:0;width:1px;height:1px" type="checkbox"/><label class="iconbtn theme-switch" for="theme-toggle" title="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></label><button class="iconbtn" onclick="alert('Настройки добавим на следующем этапе')" title="Настройки">☰</button></div></div>
+<link rel="manifest" href="manifest.webmanifest"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Амор">
+<style>
+/* Amor 31: premium analytics, scoped visual enhancement */
+#analytics .an-hero{min-height:215px;background:radial-gradient(ellipse at 83% 42%,rgba(53,128,245,.20),transparent 58%),linear-gradient(135deg,#0b1b30,#101e34 56%,#0c1729);border-color:#315071;box-shadow:inset 0 1px 0 #ffffff19,0 12px 35px #0002}
+#analytics .an-hero-copy{background:#0b1b32d9;border-color:#3a5577;color:#fff;box-shadow:0 12px 25px #0004;max-width:250px}
+#analytics .an-hero img{width:48%;max-width:225px;right:2%;bottom:-15px;z-index:2;filter:drop-shadow(0 12px 22px #0009)}
+#analytics .an-hero-chart{position:absolute;color:#5ed2ff;border:1px solid #3879d688;background:linear-gradient(145deg,#123f7a88,#15264166);border-radius:11px;box-shadow:0 0 24px #328bfa24,inset 0 1px #ffffff26;padding:10px;font-size:17px;z-index:1;transform:rotate(-6deg)}
+#analytics .an-chart-a{left:18%;bottom:20px}.an-chart-a span{font-size:11px;color:#85ecb3}
+#analytics .an-chart-b{right:3%;top:14px;transform:rotate(8deg)}.an-chart-b span{color:#70c6ff;letter-spacing:2px}
+#analytics .an-hero-stars{position:absolute;right:29%;top:15px;color:#65d3ff;letter-spacing:12px;text-shadow:0 0 12px #55b5ff}
+#analytics .an-highlights{background:linear-gradient(100deg,var(--card),var(--soft));border-radius:16px;box-shadow:0 7px 18px #0001}
+#analytics .an-section{border-radius:22px;padding:18px}
+#analytics .an-mini{padding:15px 12px;background:linear-gradient(145deg,var(--card),var(--soft));box-shadow:inset 0 1px #ffffff0c}
+#analytics .an-mini h3{font-size:13px}
+#analytics .an-value{font-size:27px;letter-spacing:-.7px}
+#analytics .an-graph svg{height:116px}
+#analytics .an-graph .an-dates{font-size:10px;fill:var(--muted)}
+#analytics .an-nutrients{gap:24px}
+#analytics .an-donut{width:137px;height:137px;filter:drop-shadow(0 7px 13px #0002)}
+#analytics .an-donut span{width:81px;height:81px;box-shadow:0 0 0 5px #ffffff06}
+#analytics .an-insight{position:relative;background:linear-gradient(110deg,var(--card) 20%,var(--soft));border-radius:22px}
+#analytics .an-insight-row img{width:135px;max-width:40%;filter:drop-shadow(0 8px 15px #0004)}
+#analytics .an-edit{margin-left:auto;background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:7px 9px;color:var(--green);font-size:11px;cursor:pointer}
+#anEditDialog{background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:22px;width:min(460px,calc(100vw - 24px));max-height:80vh;overflow:auto;padding:20px;box-shadow:0 22px 80px #0008}
+#anEditDialog::backdrop{background:#030b17bb;backdrop-filter:blur(4px)}
+#anEditDialog .an-edit-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line);font-size:12px}
+#anEditDialog input{width:100%;min-width:0;background:var(--bg);border:1px solid var(--line);border-radius:9px;padding:9px;color:var(--text)}
+#anEditDialog .an-dialog-actions{display:flex;gap:10px;margin-top:15px}
+#anEditDialog button{padding:11px 14px;border-radius:10px;border:1px solid var(--line);background:var(--soft);color:var(--text);cursor:pointer}
+#anEditDialog button.primary{background:var(--green);color:#071a12;font-weight:800;flex:1}
+@media(max-width:430px){#analytics .an-hero{min-height:185px}#analytics .an-hero-copy{font-size:12px;width:57%}#analytics .an-chart-a{left:6%;bottom:9px}#analytics .an-mini{padding:11px 8px}#analytics .an-section{padding:13px 10px}#analytics .an-edit{font-size:10px;padding:6px}}
+body:not(:has(#theme-toggle:checked)) #analytics .an-hero{background:radial-gradient(ellipse at 82% 44%,#bce9ff 0,transparent 55%),linear-gradient(120deg,#f7fcff,#e8f4ff)}
+body:not(:has(#theme-toggle:checked)) #analytics .an-hero-copy{background:#ffffffed;color:#17314b;border-color:#dceaf7}
+</style>
+</head><body><div class="app"><div class="top"><div><div class="hello" id="greeting">Доброе утро! 🌷</div><div class="date" id="date"></div></div><div class="actions"><input aria-label="Ночная тема" id="theme-toggle" style="position:absolute;opacity:0;width:1px;height:1px" type="checkbox"/><label class="iconbtn theme-switch" for="theme-toggle" title="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></label><button class="iconbtn" onclick="alert('Настройки добавим на следующем этапе')" title="Настройки">☰</button></div></div>
 <section class="screen active" id="home"><div aria-label="Утверждённый иллюстративный баннер Кости и Амора" class="hero-reference" role="img"><img alt="Костя и Амор, светлая тема" class="hero-light" src="amor_hero_light.jpg"/><img alt="Костя и Амор, ночная тема" class="hero-dark" src="amor_hero_dark.jpg"/></div><div class="grid vitals-grid">
 <div class="card metric metric-weight"><div class="metric-head"><span class="metric-icon">⚖</span><span class="metric-name">Вес</span></div><div class="metric-main"><span id="weightDisplay">95,65</span><small> кг</small></div><div class="metric-bottom"><div><div class="metric-change">↘ −350 г</div><div class="metric-detail">демо · вчера 96,00 кг</div></div><svg aria-hidden="true" class="metric-visual" viewbox="0 0 125 65"><path d="M2 12 L17 25 L32 28 L45 36 L60 36 L72 45 L89 46 L103 53 L121 56" fill="none" stroke="#22b455" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8"></path><circle cx="121" cy="56" fill="#22b455" r="5"></circle></svg></div><div class="spark" hidden="" id="weightSpark"></div></div>
 <div class="card metric metric-waist"><div class="metric-head"><span class="metric-icon">▤</span><span class="metric-name">Талия</span></div><div class="metric-main"><span id="waistDisplay">101</span><small> см</small></div><div class="metric-bottom"><div><div class="metric-change">↗ +2 см</div><div class="metric-detail">демо · вчера 99 см</div></div><svg aria-hidden="true" class="metric-visual" viewbox="0 0 125 65"><path d="M2 56 L18 43 L35 43 L49 34 L64 34 L77 24 L92 24 L106 13 L121 10" fill="none" stroke="#983de9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8"></path><circle cx="121" cy="10" fill="#983de9" r="5"></circle></svg></div><div class="spark" hidden="" id="waistSpark"></div></div>
@@ -387,7 +421,7 @@ body:has(#theme-toggle:checked) #basket .basket-cook{background:linear-gradient(
  <section class="card basket-total"><div class="row"><div><strong>Итого</strong><p id="basketTotalCount"></p></div><strong id="basketTotalPrice">—</strong></div><p id="basketPriceNote" class="basket-hint"></p><button type="button" class="savebtn" id="basketCheckout">Отметить купленное →</button></section>
  <p class="basket-hint basket-disclaimer">Данные хранятся в этом браузере и доступны без интернета. Остатки и цены вводятся вручную.</p>
  </section>
-<section class="screen" id="analytics"><header class="an-header"><h1>Аналитика <span>▥</span></h1><p>Ваш прогресс и статистика</p></header><div class="an-period" role="group" aria-label="Период аналитики"><button data-days="7" class="selected">Неделя</button><button data-days="30">Месяц</button><button data-days="90">3 месяца</button><button data-days="365">Год</button></div><section class="an-hero card"><div class="an-hero-copy">Я проанализировал ваши данные и собрал главное!</div><img src="amor_wave.png" alt="Амор — ваш помощник"/><div class="an-hero-glow"></div></section><div class="an-highlights" id="anHighlights">Показатели появятся после сохранения записей.</div><section class="card an-section"><h2><span class="an-number">1</span> Самочувствие и состояние желудка</h2><div class="an-two"><article class="an-mini"><h3>Самочувствие</h3><div id="anMoodStatus" class="an-status">Пока нет записей</div><div id="anMoodGraph" class="an-graph"></div></article><article class="an-mini"><h3>Состояние ЖКТ</h3><div id="anGutStatus" class="an-status">Пока нет записей</div><div id="anGutGraph" class="an-graph"></div></article></div></section><section class="card an-section"><h2><span class="an-number">2</span> Динамика тела</h2><div class="an-two"><article class="an-mini"><h3>Талия</h3><div class="an-value" id="anWaistValue">—</div><div id="anWaistChange" class="an-status">Нет измерений</div><div id="anWaistGraph" class="an-graph"></div></article><article class="an-mini"><h3>Вес</h3><div class="an-value" id="anWeightValue">—</div><div id="anWeightChange" class="an-status">Нет измерений</div><div id="anWeightGraph" class="an-graph"></div></article></div></section><section class="card an-section"><h2><span class="an-number">3</span> Баланс нутриентов</h2><div class="an-nutrients"><div class="an-donut" id="anDonut"><span id="anDonutCenter">—</span></div><div class="an-legend" id="anLegend">Добавьте приёмы пищи, чтобы увидеть баланс БЖУ.</div></div></section><section class="card an-insight"><h2>✦ Советы Амора</h2><div class="an-insight-row"><div id="anAdvice">Когда появятся записи за несколько дней, я помогу увидеть изменения. 💙</div><img src="amor_wave.png" alt="Амор поддерживает"/></div><p class="mini">Анализ основан на ваших записях и не заменяет консультацию врача.</p></section></section><p class="demo">Версия 30 • Аналитика • оформление по утверждённому макету • показатели ЖКТ и нижних карточек демонстрационные</p></div>
+<section class="screen" id="analytics"><header class="an-header"><h1>Аналитика <span>▥</span></h1><p>Ваш прогресс и статистика</p></header><div class="an-period" role="group" aria-label="Период аналитики"><button data-days="7" class="selected">Неделя</button><button data-days="30">Месяц</button><button data-days="90">3 месяца</button><button data-days="365">Год</button></div><section class="an-hero card"><div class="an-hero-copy">Я проанализировал ваши данные и собрал главное!</div><img src="amor_wave.png" alt="Амор — ваш помощник"/><div class="an-hero-glow"></div><div class="an-hero-chart an-chart-a">⌁ <span>↗  +12%</span></div><div class="an-hero-chart an-chart-b">▥ <span>▂▄▆▅█</span></div><div class="an-hero-stars">✦ ✧ ✦</div></section><div class="an-highlights" id="anHighlights">Показатели появятся после сохранения записей.</div><section class="card an-section"><h2><span class="an-number">1</span> Самочувствие и состояние желудка</h2><div class="an-two"><article class="an-mini"><h3>Самочувствие</h3><div id="anMoodStatus" class="an-status">Пока нет записей</div><div id="anMoodGraph" class="an-graph"></div></article><article class="an-mini"><h3>Состояние ЖКТ</h3><div id="anGutStatus" class="an-status">Пока нет записей</div><div id="anGutGraph" class="an-graph"></div></article></div></section><section class="card an-section"><h2><span class="an-number">2</span> Динамика тела <button type="button" class="an-edit" id="anEditVitals">✎ Исправить запись</button></h2><div class="an-two"><article class="an-mini"><h3>Талия</h3><div class="an-value" id="anWaistValue">—</div><div id="anWaistChange" class="an-status">Нет измерений</div><div id="anWaistGraph" class="an-graph"></div></article><article class="an-mini"><h3>Вес</h3><div class="an-value" id="anWeightValue">—</div><div id="anWeightChange" class="an-status">Нет измерений</div><div id="anWeightGraph" class="an-graph"></div></article></div></section><section class="card an-section"><h2><span class="an-number">3</span> Баланс нутриентов</h2><div class="an-nutrients"><div class="an-donut" id="anDonut"><span id="anDonutCenter">—</span></div><div class="an-legend" id="anLegend">Добавьте приёмы пищи, чтобы увидеть баланс БЖУ.</div></div></section><section class="card an-insight"><h2>✦ Советы Амора</h2><div class="an-insight-row"><div id="anAdvice">Когда появятся записи за несколько дней, я помогу увидеть изменения. 💙</div><img src="amor_wave.png" alt="Амор поддерживает"/></div><p class="mini">Анализ основан на ваших записях и не заменяет консультацию врача.</p></section></section><p class="demo">Версия 31 • Premium Analytics • оформление по утверждённому макету • показатели ЖКТ и нижних карточек демонстрационные</p></div>
 <div style="position:absolute;left:-9999px"><input checked="" id="tab-home" name="tab" type="radio"/><input id="tab-food" name="tab" type="radio"/><input id="tab-basket" name="tab" type="radio"/><input id="tab-analytics" name="tab" type="radio"/></div><div class="bottom"><div class="nav"><label for="tab-home"><span>⌂</span>Сегодня</label><label for="tab-food"><span>♧</span>Питание</label><label for="tab-basket"><span>🛒</span>Корзина</label><label for="tab-analytics"><span>▥</span>Аналитика</label></div></div><script>
 const $=s=>document.querySelector(s);const store=(k,v)=>{try{localStorage.setItem('amor_'+k,JSON.stringify(v))}catch(e){}};const load=(k,d)=>{try{return JSON.parse(localStorage.getItem('amor_'+k))??d}catch(e){return d}};const themeToggle=$('#theme-toggle');themeToggle.checked=load('theme','light')==='dark';themeToggle.addEventListener('change',()=>store('theme',themeToggle.checked?'dark':'light'));$('#date').textContent=new Intl.DateTimeFormat('ru-RU',{weekday:'long',day:'numeric',month:'long'}).format(new Date());const h=new Date().getHours();$('#greeting').textContent=h<11?'Доброе утро! 🌷':h<18?'Добрый день! 🌿':'Добрый вечер! 🌙';document.querySelectorAll('input[name=tab]').forEach(r=>r.addEventListener('change',()=>window.scrollTo(0,0)));const day=new Date().toLocaleDateString('sv-SE');document.querySelectorAll('[data-key]').forEach(el=>{let k=day+'_'+el.dataset.key;el.checked=load(k,false);el.onchange=()=>store(k,el.checked)});/* Basket 24 is initialized below, with migration of the original shopping list. */
 
@@ -818,4 +852,45 @@ $('anAdvice').textContent=weights.length>=2?'Измерения веса за в
 document.querySelectorAll('.an-period button').forEach(btn=>btn.addEventListener('click',()=>{days=Number(btn.dataset.days);document.querySelectorAll('.an-period button').forEach(x=>x.classList.toggle('selected',x===btn));render()}));
 const tab=$('tab-analytics');tab?.addEventListener('change',()=>{if(tab.checked)render()});$('saveVitals')?.addEventListener('click',()=>setTimeout(render,0));document.addEventListener('visibilitychange',()=>{if(!document.hidden&&tab?.checked)render()});render();
 })();
-</script></body></html>
+</script>
+<dialog id="anEditDialog" aria-label="Исправить измерения">
+<h2 style="margin:0 0 8px">✎ Исправить измерения</h2>
+<p class="mini">Исправляй ошибочные значения, не удаляя другие данные за день. Изменения сохраняются на этом устройстве.</p>
+<div id="anEditRows"></div>
+<div class="an-dialog-actions"><button type="button" id="anEditCancel">Отмена</button><button type="button" class="primary" id="anEditSave">Сохранить исправления</button></div>
+</dialog>
+<script>
+(function(){
+const btn=document.getElementById('anEditVitals'),dialog=document.getElementById('anEditDialog'),rows=document.getElementById('anEditRows');
+if(!btn||!dialog)return;
+const keyDate=key=>key.replace('amor_vitals_','');
+const dates=()=>Object.keys(localStorage).filter(k=>/^amor_vitals_\d{4}-\d\d-\d\d$/.test(k)).sort().reverse();
+btn.addEventListener('click',()=>{
+rows.replaceChildren();
+for(const key of dates()){
+let item;try{item=JSON.parse(localStorage.getItem(key))}catch(e){continue}
+if(!item||typeof item!=='object')continue;
+const row=document.createElement('div');row.className='an-edit-row';row.dataset.key=key;
+const date=document.createElement('strong');date.textContent=keyDate(key).split('-').reverse().join('.');
+const w=document.createElement('input');w.type='number';w.step='0.1';w.min='25';w.max='350';w.placeholder='Вес, кг';w.value=item.weight??'';w.setAttribute('aria-label','Вес '+date.textContent);
+const waist=document.createElement('input');waist.type='number';waist.step='0.1';waist.min='40';waist.max='250';waist.placeholder='Талия, см';waist.value=item.waist??'';waist.setAttribute('aria-label','Талия '+date.textContent);
+row.append(date,w,waist);rows.append(row)
+}
+if(!rows.children.length)rows.textContent='Пока нет сохранённых измерений.';
+dialog.showModal()
+});
+document.getElementById('anEditCancel').onclick=()=>dialog.close();
+document.getElementById('anEditSave').onclick=()=>{
+const edits=[];
+for(const row of rows.children){
+const [w,waist]=row.querySelectorAll('input');if(!w||!waist)continue;
+const weight=w.value.trim(),cm=waist.value.trim();
+if(weight&&(Number(weight)<25||Number(weight)>350)||cm&&(Number(cm)<40||Number(cm)>250)){alert('Проверь значения: вес 25–350 кг, талия 40–250 см.');return}
+edits.push({key:row.dataset.key,weight,cm})
+}
+for(const e of edits){let obj=JSON.parse(localStorage.getItem(e.key)||'{}');if(e.weight)obj.weight=Number(e.weight);else delete obj.weight;if(e.cm)obj.waist=Number(e.cm);else delete obj.waist;localStorage.setItem(e.key,JSON.stringify(obj))}
+dialog.close();document.getElementById('tab-analytics').dispatchEvent(new Event('change'));
+};
+})();
+</script>
+</body></html>
