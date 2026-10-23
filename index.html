@@ -304,6 +304,33 @@ body:has(#theme-toggle:checked) #basket .basket-cook{background:linear-gradient(
 
 /* Amor 30 — analytics */
 .an-header{margin:7px 0 14px}.an-header h1{font-size:26px;letter-spacing:-.6px;margin:0}.an-header h1 span{color:var(--green);font-weight:500}.an-header p{font-size:12px;color:var(--muted);margin:5px 0}.an-period{display:grid;grid-template-columns:repeat(4,1fr);background:var(--card);border:1px solid var(--line);padding:4px;border-radius:30px;gap:2px;margin-bottom:15px}.an-period button{border:0;border-radius:24px;background:transparent;color:var(--muted);font-size:12px;padding:10px 3px}.an-period button.selected{background:var(--soft);color:var(--green);font-weight:750;box-shadow:0 2px 8px #0001}.an-hero{position:relative;min-height:185px;overflow:hidden;background:linear-gradient(120deg,var(--card) 20%,var(--soft));display:flex;align-items:flex-start}.an-hero-copy{position:relative;z-index:2;width:57%;max-width:270px;line-height:1.6;font-size:14px;font-weight:650;background:var(--card);border:1px solid var(--line);padding:14px;border-radius:16px;box-shadow:var(--shadow)}.an-hero img{position:absolute;right:0;bottom:-20px;width:47%;max-width:210px;object-fit:contain;filter:drop-shadow(0 9px 15px #0004)}.an-hero-glow{position:absolute;right:0;bottom:0;width:60%;height:100%;background:radial-gradient(ellipse at 75% 65%,rgba(50,133,251,.12),transparent 70%)}.an-highlights{margin:10px 0 15px;border:1px solid var(--line);background:var(--card);border-radius:14px;padding:13px;display:flex;gap:10px;justify-content:space-around;flex-wrap:wrap;font-size:12px;color:var(--muted)}.an-highlights span{color:var(--green);font-weight:700}.an-section{margin-top:12px;padding:15px 13px}.an-section h2,.an-insight h2{display:flex;align-items:center;gap:9px;font-size:15px;margin:0 0 13px}.an-number{display:grid;place-items:center;width:23px;height:23px;background:#b5ed95;color:#18452d;border-radius:7px;font-weight:800}.an-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.an-mini{border:1px solid var(--line);border-radius:15px;padding:11px 9px;min-width:0;background:linear-gradient(140deg,var(--card),var(--soft))}.an-mini h3{font-size:12px;margin:0 0 9px}.an-status{font-size:11px;color:var(--muted);min-height:29px}.an-value{font-size:24px;font-weight:800;margin-bottom:5px}.an-graph{min-height:95px;margin-top:7px}.an-graph svg{display:block;width:100%;height:100px;overflow:visible}.an-graph .an-empty{color:var(--muted);font-size:11px;padding:20px 0}.an-nutrients{display:flex;gap:20px;align-items:center;min-height:150px}.an-donut{width:126px;height:126px;border-radius:50%;background:conic-gradient(var(--line) 0 100%);display:grid;place-items:center;flex-shrink:0}.an-donut span{display:grid;place-items:center;width:72px;height:72px;border-radius:50%;background:var(--card);font-size:12px;text-align:center;font-weight:700}.an-legend{font-size:12px;line-height:2;color:var(--muted)}.an-legend b{color:var(--text)}.an-insight{margin-top:12px;background:linear-gradient(110deg,var(--card),var(--soft));overflow:hidden}.an-insight-row{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:13px;line-height:1.6}.an-insight-row img{width:110px;max-width:36%;align-self:flex-end;margin-bottom:-15px}.an-insight .mini{margin-top:8px}.nav{justify-content:space-around}.nav label{flex:1}
+
+/* AMOR v43: Nutrition approved visual, responsive functional implementation */
+#food .food-summary{position:relative;isolation:isolate;overflow:hidden;min-height:246px;padding:24px!important;background:linear-gradient(105deg,#102b3a 0%,#0b2331 52%,#102b25 100%)!important;border:1px solid #315367!important;color:#f8fbff}
+#food .food-summary-content{position:relative;z-index:2;width:66%}
+#food .food-date-title,#food .food-date-row,#food .food-ring strong{color:#f8fbff}
+#food #foodDate{color:#c5d7e8;color-scheme:dark}
+#food .food-ring{width:min(106px,100%);padding:6px;box-shadow:0 0 18px #0002}
+#food .food-ring>div{background:#0d2432}
+#food .food-ring strong{font-size:22px}
+#food .food-ring small,#food .food-ring-item>span{color:#c9d8e7}
+#food .food-rings{gap:14px;margin-top:24px}
+#food .food-hero-visual{position:absolute;z-index:1;right:-10px;bottom:-10px;width:38%;height:100%;display:flex;align-items:end;justify-content:end;pointer-events:none;background:radial-gradient(ellipse at 65% 65%,#155c4840,transparent 70%)}
+#food .food-hero-visual img{width:100%;max-height:100%;object-fit:contain;object-position:right bottom;filter:drop-shadow(0 5px 24px #00c9a529)}
+#food .food-hero-message{position:absolute;z-index:3;right:21%;top:20px;width:18%;min-width:125px;padding:12px;border:1px solid #297f83;border-radius:17px;background:#082a34d9;box-shadow:0 8px 25px #0003}
+#food .food-hero-message strong{display:block;font-size:14px;color:white}
+#food .food-hero-message span{display:block;margin-top:7px;font-size:11px;line-height:1.45;color:#54f5a1}
+#food .food-quick-actions{display:flex;align-items:stretch;gap:10px;margin-top:12px}
+#food .food-quick-actions .quick-open{flex:1;min-width:0;margin:0!important}
+#food .food-manual-shortcut{border:1px solid #31506a;border-radius:14px;background:#102538;color:#e6f4ff;font-weight:700!important;padding:12px 18px;white-space:nowrap}
+#food .food-entry{background:linear-gradient(105deg,var(--card),var(--card));border-radius:18px}
+#food .food-entry-art{width:90px;height:78px;flex-basis:90px}
+#food .food-entry-head strong{font-size:16px}
+#food .food-entry-cal{font-size:12px}
+@media(min-width:900px){#food .food-summary{min-height:275px}#food .food-ring{width:120px}#food .food-ring strong{font-size:25px}}
+@media(max-width:680px){#food .food-summary{padding:17px 12px!important;min-height:275px}#food .food-summary-content{width:100%;padding-top:112px}#food .food-hero-visual{height:150px;width:52%;right:0;top:0;bottom:auto}#food .food-hero-message{top:18px;left:14px;right:auto;width:45%;min-width:0}#food .food-ring{width:min(82px,100%);padding:4px}#food .food-ring strong{font-size:16px}#food .food-rings{gap:5px;margin-top:14px}#food .food-quick-actions{flex-direction:column}#food .food-manual-shortcut{width:100%}#food .food-entry-art{width:60px;height:65px;flex-basis:60px}}
+@media(max-width:370px){#food .food-ring strong{font-size:14px}#food .food-hero-message span{font-size:10px}}
+
 </style>
 <style>
 /* Amor 17: fast entry, non-blocking estimate with explicit uncertainty */
@@ -504,9 +531,9 @@ body:not(:has(#theme-toggle:checked)) #meds .med-hero p{color:#536b83}
 <section class="screen" id="food">
 <div id="foodDiaryView">
  <div class="food-top"><div><h1>Питание <span>♧</span></h1><p>Сбалансированное питание каждый день</p></div><button class="food-round" id="foodSettings" title="Настроить цель" aria-label="Настроить цель">☷</button></div>
- <div class="food-summary card"><div class="food-date-row"><div><div class="food-date-title">▣ <strong id="foodDayTitle">Сегодня</strong></div><input type="date" id="foodDate" aria-label="Выбрать дату"/></div><button id="foodGoalOpen" class="food-goal-chip">Цель на день ↗</button></div>
- <div class="food-rings"><div class="food-ring-item"><div class="food-ring" style="--ring:#40c65a" id="foodRingKcal"><div><strong id="foodSumKcal">0</strong><small>ккал</small></div></div><span id="foodGoalKcalLabel">из 2154</span></div><div class="food-ring-item"><div class="food-ring" style="--ring:#298bff" id="foodRingProtein"><div><strong id="foodSumProtein">0</strong><small>белки</small></div></div><span id="foodGoalProteinLabel">из 130 г</span></div><div class="food-ring-item"><div class="food-ring" style="--ring:#e8aa2a" id="foodRingFat"><div><strong id="foodSumFat">0</strong><small>жиры</small></div></div><span id="foodGoalFatLabel">из 80 г</span></div><div class="food-ring-item"><div class="food-ring" style="--ring:#ad4be7" id="foodRingCarbs"><div><strong id="foodSumCarbs">0</strong><small>углеводы</small></div></div><span id="foodGoalCarbsLabel">из 150 г</span></div></div></div>
- <button id="quickTopOpen" type="button" class="quick-open">⚡ Быстро записать блюдо — название и граммы →</button><div class="food-section-title"><h2>Сегодняшнее меню</h2><button id="foodAddOpen">＋ Добавить приём пищи</button></div>
+ <div class="food-summary card"><div class="food-hero-visual" aria-hidden="true"><img src="amor_nutrition_hero.png" alt=""/></div><div class="food-hero-message"><strong id="foodHeroHeading">Амор рядом! 💚</strong><span id="foodHeroCaption">Записывай блюда — и мы увидим прогресс ✨</span></div><div class="food-summary-content"><div class="food-date-row"><div><div class="food-date-title">▣ <strong id="foodDayTitle">Сегодня</strong></div><input type="date" id="foodDate" aria-label="Выбрать дату"/></div><button id="foodGoalOpen" class="food-goal-chip">Цель на день ↗</button></div>
+ <div class="food-rings"><div class="food-ring-item"><div class="food-ring" style="--ring:#40c65a" id="foodRingKcal"><div><strong id="foodSumKcal">0</strong><small>ккал</small></div></div><span id="foodGoalKcalLabel">из 2154</span></div><div class="food-ring-item"><div class="food-ring" style="--ring:#298bff" id="foodRingProtein"><div><strong id="foodSumProtein">0</strong><small>белки</small></div></div><span id="foodGoalProteinLabel">из 130 г</span></div><div class="food-ring-item"><div class="food-ring" style="--ring:#e8aa2a" id="foodRingFat"><div><strong id="foodSumFat">0</strong><small>жиры</small></div></div><span id="foodGoalFatLabel">из 80 г</span></div><div class="food-ring-item"><div class="food-ring" style="--ring:#ad4be7" id="foodRingCarbs"><div><strong id="foodSumCarbs">0</strong><small>углеводы</small></div></div><span id="foodGoalCarbsLabel">из 150 г</span></div></div></div></div>
+ <div class="food-quick-actions"><button id="quickTopOpen" type="button" class="quick-open">⚡ Быстро записать блюдо — название и граммы →</button><button id="foodManualShortcut" type="button" class="food-manual-shortcut">＋ Добавить вручную</button></div><div class="food-section-title"><h2>Сегодняшнее меню</h2><button id="foodAddOpen">＋ Добавить приём пищи</button></div>
  <div id="foodEntries" class="food-entries" aria-live="polite"></div>
  <div class="food-day-total card"><span>▥ <strong>Итого за день</strong><small id="foodTotalSubtitle">0 ккал</small></span><span class="food-total-note" id="foodTotalNote">Каждый приём пищи имеет значение ♡</span></div>
  <button id="foodRecipeOpen" class="food-recipe-banner card"><span><strong>Что приготовить сегодня?</strong><small>Подберём блюда под ваши цели</small><em>Подобрать →</em></span><img class="amor-pose-light" src="amor_food_light.png" alt="Амор предлагает блюда"/><img class="amor-pose-dark" src="amor_food_dark.png" alt="" aria-hidden="true"/></button>
@@ -1078,4 +1105,25 @@ $('medExport').onclick=()=>{const blob=new Blob([JSON.stringify({version:32,expo
 $('medImport').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{const data=JSON.parse(await f.text());if(!Array.isArray(data.meds)||!Array.isArray(data.logs)||!Array.isArray(data.visits))throw Error('Неверный формат');if(!confirm('Восстановить резервную копию? Текущие данные раздела лекарств будут заменены.'))return;state.meds=data.meds;state.logs=data.logs;state.visits=data.visits;if(save())render()}catch(err){alert('Не удалось открыть резервную копию: '+err.message)}finally{e.target.value=''}};
 render();
 })();
-</script></body></html>
+</script>
+<script>
+(function(){
+ function init(){
+  var manual=document.getElementById('foodManualShortcut');
+  var add=document.getElementById('foodAddOpen');
+  if(manual&&add) manual.addEventListener('click',function(){add.click()});
+  var kcal=document.getElementById('foodSumKcal');
+  var title=document.getElementById('foodHeroHeading');
+  var caption=document.getElementById('foodHeroCaption');
+  if(!kcal||!title||!caption)return;
+  function update(){
+   var n=Number((kcal.textContent||'0').replace(/[^0-9.,]/g,'').replace(',','.'))||0;
+   title.textContent=n>0?'Отличное начало! ✨':'Амор рядом! 💚';
+   caption.textContent=n>0?'Сегодня записано '+Math.round(n).toLocaleString('ru-RU')+' ккал':'Запиши первый приём пищи — и увидишь прогресс';
+  }
+  new MutationObserver(update).observe(kcal,{childList:true,characterData:true,subtree:true});update();
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
+</body></html>
