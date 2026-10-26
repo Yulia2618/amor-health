@@ -1051,6 +1051,22 @@ body:has(#theme-toggle:checked) #basket .basket-hero{
  #basket .basket-hero p{font-size:11px!important;max-width:200px!important}
  #basket .basket-hero button{font-size:10px!important;padding:9px 10px!important}
 }
+</style><style id="amor-v69-basket-height">
+/* Match Nutrition's main card height while preserving Basket's artwork and live controls. */
+#basket .basket-hero,#basket .basket-hero.card,
+body:has(#theme-toggle:checked) #basket .basket-hero{
+ min-height:250px!important;
+ background-position:center center!important;
+ background-size:cover!important;
+}
+@media(max-width:520px){
+ #basket .basket-hero,#basket .basket-hero.card,
+ body:has(#theme-toggle:checked) #basket .basket-hero{
+  min-height:230px!important;
+  background-position:72% center!important;
+ }
+ #basket .basket-hero>div:first-child{flex-basis:58%!important;max-width:58%!important}
+}
 </style></head><body><div class="app"><div class="top"><div><div class="hello" id="greeting">Доброе утро! 🌷</div><div class="date" id="date"></div></div><div class="actions"><input aria-label="Ночная тема" id="theme-toggle" style="position:absolute;opacity:0;width:1px;height:1px" type="checkbox"/><label class="iconbtn theme-switch" for="theme-toggle" title="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></label><button class="iconbtn" onclick="alert('Настройки добавим на следующем этапе')" title="Настройки">☰</button></div></div>
 <section class="screen active" id="home"><div aria-label="Утверждённый иллюстративный баннер Кости и Амора" class="hero-reference" role="img"><img alt="Костя и Амор, светлая тема" class="hero-light" src="amor_hero_light.jpg"/><img alt="Костя и Амор, ночная тема" class="hero-dark" src="amor_hero_dark.jpg"/></div><div class="grid vitals-grid">
 <div class="card metric metric-weight"><div class="metric-head"><span class="metric-icon">⚖</span><span class="metric-name">Вес</span></div><div class="metric-main"><span id="weightDisplay">—</span><small> кг</small></div><div class="metric-bottom"><div><div class="metric-change" id="weightDelta">Пока нет сравнения</div><div class="metric-detail" id="weightPrev">Добавь два измерения</div></div></div><div class="spark" hidden="" id="weightSpark"></div></div>
