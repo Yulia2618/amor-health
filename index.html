@@ -757,6 +757,84 @@ body:not(:has(#theme-toggle:checked)) #analytics .an-hero-copy{background:rgba(2
 body.light #basket .basket-hero-robot img.amor-pose-light,body.light #basket .basket-cook>img.amor-pose-light,body.light #analytics .an-hero>img.amor-pose-light{display:block!important}
 body.light #basket .basket-hero-robot img.amor-pose-dark,body.light #basket .basket-cook>img.amor-pose-dark,body.light #analytics .an-hero>img.amor-pose-dark{display:none!important}
 </style>
+
+<style id="amor-v55-food-focused">
+/* Dedicated Food page rebuild: one visual layer, interactive data above it. */
+#food .food-summary{
+  background:linear-gradient(112deg,#0b2d40 0%,#0b2939 49%,#0b2637 100%)!important;
+  border:1px solid #31516c!important;min-height:248px!important;
+  padding:23px 21px!important;border-radius:21px!important;
+  box-shadow:0 15px 35px rgba(0,0,0,.17)!important;
+}
+#food .food-summary::before{
+  background:radial-gradient(ellipse at 87% 33%,rgba(255,181,65,.21),transparent 38%),
+  radial-gradient(ellipse at 93% 78%,rgba(15,199,131,.19),transparent 47%),
+  linear-gradient(108deg,#0d3043 0%,#0b2738 70%,#142b36 100%)!important;
+}
+#food .food-summary::after{
+  z-index:2!important;
+  background:linear-gradient(90deg,#0d3043 0%,rgba(11,42,58,.96) 42%,rgba(11,42,58,.55) 62%,transparent 84%)!important;
+}
+#food .food-summary .food-hero-visual{
+  position:absolute!important;z-index:1!important;top:0!important;right:0!important;
+  bottom:0!important;left:auto!important;width:48%!important;height:100%!important;
+  background:transparent!important;overflow:hidden!important;
+  mask-image:linear-gradient(90deg,transparent 0%,#000 23%)!important;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 23%)!important;
+}
+#food .food-summary .food-hero-visual img{
+  position:absolute!important;top:auto!important;left:auto!important;right:0!important;bottom:0!important;
+  width:100%!important;height:100%!important;max-height:none!important;
+  object-fit:contain!important;object-position:right bottom!important;
+  filter:none!important;transform:none!important;
+}
+#food .food-summary-content{z-index:4!important;width:68%!important;padding:0!important}
+#food .food-date-row{align-items:start!important}
+#food .food-goal-chip{position:relative!important;z-index:6!important;background:#092f38e8!important;color:#57ef9d!important;border:1px solid #166b66!important}
+#food .food-rings{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:12px!important;margin-top:28px!important}
+#food .food-ring{width:min(88px,100%)!important;padding:5px!important;background:conic-gradient(var(--ring) var(--percent),#234563 var(--percent))!important;box-shadow:0 0 0 2px rgba(79,157,198,.12)!important}
+#food .food-ring>div{background:#0a2a3b!important}
+#food .food-ring strong{font-size:21px!important}
+#food .food-ring-item>span{font-size:10px!important;color:#d2e4f2!important}
+#food .food-hero-message{
+  position:absolute!important;z-index:5!important;top:16px!important;left:auto!important;right:23%!important;
+  width:170px!important;max-width:22%!important;min-width:0!important;
+  padding:11px 12px!important;border-radius:15px!important;
+  background:rgba(4,41,48,.92)!important;border:1px solid #178875!important;
+  box-shadow:0 9px 22px #0005!important;
+}
+#food .food-hero-message strong{font-size:12px!important;line-height:1.3!important}
+#food .food-hero-message span{font-size:10px!important;line-height:1.35!important;margin-top:5px!important}
+#food .food-recipes-hero{background:linear-gradient(105deg,#172c46,#122f3d)!important;min-height:174px!important}
+#food .food-recipes-hero::after{background:linear-gradient(90deg,#172c46 0%,#172c46 43%,rgba(23,44,70,.4) 74%,transparent)!important}
+#food .food-recipes-hero>img{width:32%!important;height:100%!important;right:0!important;bottom:0!important;object-fit:contain!important;object-position:right bottom!important}
+#food .food-recipes-hero>div:first-child{max-width:67%!important;z-index:5!important}
+#food .food-recipe-banner>img{width:30%!important;object-fit:contain!important}
+@media(max-width:700px){
+ #food .food-summary{min-height:238px!important;padding:18px 15px!important}
+ #food .food-summary-content{width:72%!important}
+ #food .food-summary .food-hero-visual{width:48%!important}
+ #food .food-rings{gap:7px!important;margin-top:23px!important}
+ #food .food-ring{width:min(75px,100%)!important}
+ #food .food-ring strong{font-size:17px!important}
+ #food .food-hero-message{right:22%!important;max-width:25%!important;padding:8px!important}
+ #food .food-hero-message span{font-size:9px!important}
+}
+@media(max-width:440px){
+ #food .food-summary{min-height:290px!important;padding:14px 12px!important}
+ #food .food-summary-content{width:100%!important;padding-top:122px!important}
+ #food .food-summary .food-hero-visual{width:58%!important;height:75%!important;top:0!important;bottom:auto!important}
+ #food .food-summary::after{background:linear-gradient(90deg,rgba(11,43,59,.95) 0%,rgba(11,43,59,.4) 55%,transparent 95%)!important}
+ #food .food-hero-message{top:13px!important;left:13px!important;right:auto!important;width:43%!important;max-width:43%!important}
+ #food .food-date-row{align-items:center!important}
+ #food .food-rings{margin-top:14px!important;gap:5px!important}
+ #food .food-ring{width:min(73px,100%)!important;padding:4px!important}
+ #food .food-ring strong{font-size:16px!important}
+ #food .food-ring-item>span{font-size:9px!important}
+ #food .food-recipes-hero>img{width:39%!important}
+ #food .food-recipes-hero>div:first-child{max-width:63%!important}
+}
+</style>
 </head><body><div class="app"><div class="top"><div><div class="hello" id="greeting">Доброе утро! 🌷</div><div class="date" id="date"></div></div><div class="actions"><input aria-label="Ночная тема" id="theme-toggle" style="position:absolute;opacity:0;width:1px;height:1px" type="checkbox"/><label class="iconbtn theme-switch" for="theme-toggle" title="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></label><button class="iconbtn" onclick="alert('Настройки добавим на следующем этапе')" title="Настройки">☰</button></div></div>
 <section class="screen active" id="home"><div aria-label="Утверждённый иллюстративный баннер Кости и Амора" class="hero-reference" role="img"><img alt="Костя и Амор, светлая тема" class="hero-light" src="amor_hero_light.jpg"/><img alt="Костя и Амор, ночная тема" class="hero-dark" src="amor_hero_dark.jpg"/></div><div class="grid vitals-grid">
 <div class="card metric metric-weight"><div class="metric-head"><span class="metric-icon">⚖</span><span class="metric-name">Вес</span></div><div class="metric-main"><span id="weightDisplay">—</span><small> кг</small></div><div class="metric-bottom"><div><div class="metric-change" id="weightDelta">Пока нет сравнения</div><div class="metric-detail" id="weightPrev">Добавь два измерения</div></div></div><div class="spark" hidden="" id="weightSpark"></div></div>
@@ -776,7 +854,7 @@ body.light #basket .basket-hero-robot img.amor-pose-dark,body.light #basket .bas
 <section class="screen" id="food">
 <div id="foodDiaryView">
  <div class="food-top"><div><h1>Питание <span>♧</span></h1><p>Сбалансированное питание каждый день</p></div><button class="food-round" id="foodSettings" title="Настроить цель" aria-label="Настроить цель">☷</button></div>
- <div class="food-summary card"><div class="food-hero-visual" aria-hidden="true"><img src="amor_scene_food.png" alt=""/></div><div class="food-hero-message"><strong id="foodHeroHeading">Амор рядом! 💚</strong><span id="foodHeroCaption">Записывай блюда — и мы увидим прогресс ✨</span></div><div class="food-summary-content"><div class="food-date-row"><div><div class="food-date-title">▣ <strong id="foodDayTitle">Сегодня</strong></div><input type="date" id="foodDate" aria-label="Выбрать дату"/></div><button id="foodGoalOpen" class="food-goal-chip">Цель на день ↗</button></div>
+ <div class="food-summary card"><div class="food-hero-visual" aria-hidden="true"><img src="amor_nutrition_hero.png" alt=""/></div><div class="food-hero-message"><strong id="foodHeroHeading">Амор рядом! 💚</strong><span id="foodHeroCaption">Записывай блюда — и мы увидим прогресс ✨</span></div><div class="food-summary-content"><div class="food-date-row"><div><div class="food-date-title">▣ <strong id="foodDayTitle">Сегодня</strong></div><input type="date" id="foodDate" aria-label="Выбрать дату"/></div><button id="foodGoalOpen" class="food-goal-chip">Цель на день ↗</button></div>
  <div class="food-rings"><div class="food-ring-item"><div class="food-ring" style="--ring:#40c65a" id="foodRingKcal"><div><strong id="foodSumKcal">0</strong><small>ккал</small></div></div><span id="foodGoalKcalLabel">из 2154</span></div><div class="food-ring-item"><div class="food-ring" style="--ring:#298bff" id="foodRingProtein"><div><strong id="foodSumProtein">0</strong><small>белки</small></div></div><span id="foodGoalProteinLabel">из 130 г</span></div><div class="food-ring-item"><div class="food-ring" style="--ring:#e8aa2a" id="foodRingFat"><div><strong id="foodSumFat">0</strong><small>жиры</small></div></div><span id="foodGoalFatLabel">из 80 г</span></div><div class="food-ring-item"><div class="food-ring" style="--ring:#ad4be7" id="foodRingCarbs"><div><strong id="foodSumCarbs">0</strong><small>углеводы</small></div></div><span id="foodGoalCarbsLabel">из 150 г</span></div></div></div></div>
  <div class="food-quick-actions"><button id="quickTopOpen" type="button" class="quick-open">⚡ Быстро записать блюдо — название и граммы →</button><button id="foodManualShortcut" type="button" class="food-manual-shortcut">＋ Добавить вручную</button></div><div class="food-section-title"><h2>Сегодняшнее меню</h2><button id="foodAddOpen">＋ Добавить приём пищи</button></div>
  <div id="foodEntries" class="food-entries" aria-live="polite"></div>
