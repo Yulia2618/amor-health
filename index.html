@@ -336,6 +336,15 @@ body:has(#theme-toggle:checked) #basket .basket-cook{background:linear-gradient(
 #analytics .an-insight>img.an-advice-scene-v75{width:100%!important;object-fit:cover!important;object-position:center center!important}
 #analytics .an-insight::before{background:linear-gradient(90deg,#101d30 0%,#101d30 32%,rgba(16,29,48,.93) 46%,rgba(16,29,48,.40) 67%,transparent 86%)!important}
 @media(max-width:600px){#analytics .an-insight>img.an-advice-scene-v75{width:100%!important;object-position:60% center!important}#analytics .an-insight::before{background:linear-gradient(90deg,#101d30 0%,#101d30 32%,rgba(16,29,48,.92) 51%,rgba(16,29,48,.38) 73%,transparent 98%)!important}}
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style>
 <style>
 /* Amor 17: fast entry, non-blocking estimate with explicit uncertainty */
@@ -349,6 +358,15 @@ body:has(#theme-toggle:checked) #basket .basket-cook{background:linear-gradient(
 .quick-two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .quick-badge{color:var(--green);font-weight:700;font-size:12px}
 .quick-small{font-size:11px;color:var(--muted);line-height:1.55}
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style>
 <style>
 .quick-web-results{display:grid;gap:7px;margin:7px 0 12px;max-height:245px;overflow:auto}
@@ -358,11 +376,29 @@ body:has(#theme-toggle:checked) #basket .basket-cook{background:linear-gradient(
 .quick-web-choice span{flex:1;min-width:0;font-size:12px;line-height:1.45}
 .quick-web-choice small{display:block;color:var(--muted);font-size:10px}
 .quick-web-note{font-size:11px;color:var(--muted);line-height:1.5}
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style>
 <style>
 .quick-image-fallback{display:flex;align-items:center;justify-content:center;flex:0 0 48px;width:48px;height:48px;border-radius:12px;background:linear-gradient(145deg,rgba(46,189,119,.16),rgba(69,110,168,.12));font-size:23px;overflow:hidden}
 .quick-image-fallback img{width:100%;height:100%;object-fit:cover;display:block}
 .food-image-fallback{display:flex!important;align-items:center;justify-content:center;background:linear-gradient(145deg,rgba(46,189,119,.16),rgba(69,110,168,.12));font-size:27px;border-radius:14px}
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style>
 <link rel="manifest" href="manifest.webmanifest"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Амор">
 <style>
@@ -397,6 +433,15 @@ body:has(#theme-toggle:checked) #basket .basket-cook{background:linear-gradient(
 @media(max-width:430px){#analytics .an-hero{min-height:185px}#analytics .an-hero-copy{font-size:12px;width:57%}#analytics .an-chart-a{left:6%;bottom:9px}#analytics .an-mini{padding:11px 8px}#analytics .an-section{padding:13px 10px}#analytics .an-edit{font-size:10px;padding:6px}}
 body:not(:has(#theme-toggle:checked)) #analytics .an-hero{background:radial-gradient(ellipse at 82% 44%,#bce9ff 0,transparent 55%),linear-gradient(120deg,#f7fcff,#e8f4ff)}
 body:not(:has(#theme-toggle:checked)) #analytics .an-hero-copy{background:#ffffffed;color:#17314b;border-color:#dceaf7}
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style>
 <style>
 #meds .med-head h1{font-size:26px;margin:0}#meds .med-head h1 span{color:var(--green)}#meds .med-head p{font-size:12px;color:var(--muted);margin:5px 0 16px}
@@ -409,7 +454,25 @@ body:not(:has(#theme-toggle:checked)) #analytics .an-hero-copy{background:#fffff
 .med-date{color:var(--muted);font-size:12px;margin:13px 0}.med-backup{margin-top:18px}.med-backup p{font-size:12px;color:var(--muted);line-height:1.6}.med-backup button,.med-import{display:inline-block;margin:5px 6px 4px 0}.med-backup small{display:block;color:var(--muted);margin-top:7px}
 .med-dialog{border:1px solid var(--line);border-radius:22px;background:var(--card);color:var(--text);width:min(480px,calc(100vw - 20px));max-height:85vh;overflow:auto;padding:22px}.med-dialog::backdrop{background:#030b17c9;backdrop-filter:blur(5px)}.med-dialog h2{font-size:19px;margin:0 0 18px}.med-dialog label{display:block;color:var(--muted);font-size:12px;margin:12px 0 0}.med-dialog input,.med-dialog select,.med-dialog textarea{display:block;width:100%;margin-top:6px;padding:12px;border:1px solid var(--line);border-radius:11px;background:var(--bg);color:var(--text);font-size:14px}.med-fields{display:grid;grid-template-columns:1fr 1fr;gap:9px}.med-form-actions{display:flex;gap:9px;margin-top:18px}.med-form-actions button{flex:1;border:1px solid var(--line);border-radius:12px;padding:13px;background:var(--soft);color:var(--text)}.med-form-actions .med-primary{background:var(--green);color:#061910;font-weight:800}.med-photo-list{display:flex;gap:9px;flex-wrap:wrap;margin:12px 0}.med-photo-list img{width:92px;height:100px;object-fit:cover;border-radius:12px;cursor:pointer}.med-photo-list button{border:0;background:transparent;padding:0}.med-logline{font-size:12px;padding:12px 0;border-bottom:1px solid var(--line)}.med-logline strong{color:var(--green)}.med-logline button{margin-left:10px;background:transparent;border:0;color:#ee7474;font-size:11px}
 @media(max-width:420px){.med-actions button{font-size:11px}.med-hero-icon{font-size:35px}.med-fields{gap:7px}}
-</style><style>#meds{width:100%;max-width:100%;min-width:0}#meds .med-head{margin-top:8px}#meds .med-hero{min-height:150px}#meds .med-actions button{min-height:46px}#meds .med-view[hidden]{display:none!important}#meds .med-backup{margin-bottom:20px}@media(min-width:740px){#meds .med-hero{min-height:160px}} </style><style>
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
+</style><style>#meds{width:100%;max-width:100%;min-width:0}#meds .med-head{margin-top:8px}#meds .med-hero{min-height:150px}#meds .med-actions button{min-height:46px}#meds .med-view[hidden]{display:none!important}#meds .med-backup{margin-bottom:20px}@media(min-width:740px){#meds .med-hero{min-height:160px}} 
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
+</style><style>
 /* v37: visual alignment to approved light/dark Amor references; presentation only */
 :root{--bg:#f8f9fb;--card:#fff;--text:#11182b;--muted:#747d8e;--line:#e8edf0;--green:#20b454;--soft:#edf8f0;--shadow:0 4px 18px rgba(23,38,58,.045)}
 body:has(#theme-toggle:checked){--bg:#060e19;--card:#0c1726;--text:#f4f7fb;--muted:#a1acbb;--line:#1d2c3e;--green:#60d884;--soft:#102c27;--shadow:0 4px 20px rgba(0,0,0,.12)}
@@ -429,6 +492,15 @@ body:has(#theme-toggle:checked) .hero{background:linear-gradient(115deg,#111c2e,
 .food-photo{border-radius:15px}
 body:has(#theme-toggle:checked) .an-section,body:has(#theme-toggle:checked) .an-insight{border-color:#233146}
 @media(max-width:420px){.med-hero{gap:10px}.med-head h1{letter-spacing:-.35px}}
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style>
 <style id="amor-v38-polish">
 /* v38: visual polish only; preserves all existing ids and state. */
@@ -450,6 +522,15 @@ body:has(#theme-toggle:checked) input,body:has(#theme-toggle:checked) select,bod
 body:has(#theme-toggle:checked) .food-recipe:hover{box-shadow:0 10px 30px rgba(0,0,0,.3)}
 body:has(#theme-toggle:checked) .basket-hero-robot img,body:has(#theme-toggle:checked) .an-hero img{filter:drop-shadow(0 14px 20px rgba(0,0,0,.28))}
 @media(prefers-reduced-motion:reduce){.card,button,.food-recipe,.food-entry,.smart-item{transition:none!important}}
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style>
 <style id="amor-v39-poses">
 .amor-pose-dark{display:none!important}
@@ -460,6 +541,15 @@ body:has(#theme-toggle:checked) .amor-pose-dark{display:block!important}
 .an-hero>img.amor-pose-light,.an-hero>img.amor-pose-dark{object-fit:contain;object-position:center bottom;max-width:52%;height:100%;position:absolute;right:0;bottom:0;z-index:1}
 .food-recipe-banner img.amor-pose-light,.food-recipe-banner img.amor-pose-dark{width:150px;height:135px;object-fit:contain}
 @media(max-width:480px){.basket-hero-robot{min-width:125px}.food-recipe-banner img.amor-pose-light,.food-recipe-banner img.amor-pose-dark{width:118px;height:115px}}
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style><style id="amor-v40-pose-fixes">
 /* Make every themed pose visible only in its appropriate theme. */
 .amor-pose-light{display:block!important}.amor-pose-dark{display:none!important}
@@ -475,6 +565,15 @@ body:has(#theme-toggle:checked) .amor-pose-dark{display:block!important}
 #meds .med-hero{overflow:hidden;gap:12px}
 #meds .med-hero>div{min-width:0;flex:1}
 @media(max-width:460px){.med-hero-robot{flex-basis:95px;height:110px}}
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style>
 <style id="amor-v41-polish">
 #meds .med-hero{min-height:126px!important;padding:16px 18px!important;gap:12px}
@@ -498,6 +597,15 @@ body:has(#theme-toggle:checked) .amor-pose-dark{display:block!important}
  #meds .med-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
  #meds .med-actions button{padding:10px 7px}
 }
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style>
 <style id="amor-v42-approved-layout">
 /* One consistent visual language from the six approved reference screens. */
@@ -517,6 +625,15 @@ body:not(:has(#theme-toggle:checked)) #meds .med-hero p{color:#536b83}
 .amor-v42-preview{margin:16px 0 14px}.amor-v42-preview-title{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px}.amor-v42-preview-title strong{font-size:14px}.amor-v42-preview-title span{font-size:10px;color:var(--green)}
 .amor-v42-photo-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}.amor-v42-photo-grid>div{border:1px solid var(--line);background:var(--card);border-radius:14px;overflow:hidden}.amor-v42-photo-grid img{display:block;width:100%;aspect-ratio:1.15;object-fit:cover}.amor-v42-photo-grid span{display:block;font-size:10px;padding:7px 6px;line-height:1.35}.amor-v42-preview>small{display:block;font-size:10px;color:var(--muted);margin-top:8px}
 @media(max-width:530px){.amor-v42-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#meds .med-hero{min-height:130px!important;padding:15px!important}#meds .med-hero-robot{flex-basis:95px!important;height:106px!important}}
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style><style id="amor-v44-unified">
 :root{--amor-radius:22px;--amor-hero-height:172px}
 #food .food-summary,#basket .basket-hero,#analytics .an-hero,#meds .med-hero,#food .food-recipe-banner,#food .food-recipes-hero,#basket .basket-cook{border-radius:var(--amor-radius)!important;border:1px solid var(--line)!important;overflow:hidden!important;box-shadow:0 12px 32px rgba(0,0,0,.12)!important;position:relative;isolation:isolate}
@@ -542,6 +659,15 @@ body:has(#theme-toggle:checked) #basket .basket-hero,body:has(#theme-toggle:chec
 #analytics .an-insight-row img{max-width:150px;object-fit:contain}
 @media(max-width:680px){#food .food-summary-content{width:100%!important;padding-top:112px!important}#food .food-hero-visual{height:155px!important;width:48%!important;top:0!important;bottom:auto!important}#food .food-hero-message{left:14px!important;right:auto!important;top:18px!important;width:44%!important;max-width:190px!important;min-width:0!important}#food .food-rings{gap:5px!important}#food .food-ring{width:min(82px,100%)!important}#basket .basket-hero,#analytics .an-hero,#meds .med-hero{min-height:145px!important}#basket .basket-hero-robot,#meds .med-hero-robot{height:145px!important}#meds .med-hero-robot{flex-basis:30%!important;max-width:30%!important}#meds .med-hero p{max-width:240px}}
 @media(max-width:410px){#food .food-hero-message{padding:9px!important}#food .food-hero-message span{font-size:9px!important}#basket .basket-hero>div:first-child{max-width:68%!important}#meds .med-hero strong{font-size:14px!important}#meds .med-hero p{font-size:11px!important}}
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style><style id="amor-v45-fixes">
 .amor-test-cleanup{margin:14px 0;padding:15px 18px!important}.amor-test-cleanup summary{font-weight:700;font-size:13px;cursor:pointer}.amor-test-cleanup .field{margin-top:14px;max-width:280px}.amor-test-cleanup button{margin-top:10px;color:var(--text)}
 .metric-change{white-space:normal!important;line-height:1.35}.metric-detail{white-space:normal!important}.metric-weight .metric-change,.metric-waist .metric-change{font-size:12px}
@@ -549,6 +675,15 @@ body:has(#theme-toggle:checked) #basket .basket-hero,body:has(#theme-toggle:chec
 #meds .med-hero-robot img{mask-image:radial-gradient(ellipse 76% 85% at 55% 55%,black 67%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 76% 85% at 55% 55%,black 67%,transparent 100%)}
 #basket .basket-hero-robot img,#analytics .an-hero img{mask-image:linear-gradient(90deg,transparent 0%,black 19%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,black 19%)}
 @media(max-width:640px){#food .food-hero-message{left:12px!important;right:auto!important;top:12px!important}}
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style><style id="amor-v47-cinematic">
 /* AMOR v47 — cohesive cinematic art direction; no changes to application state */
 body:has(#theme-toggle:checked){--amor-surface:#0e1e32;--amor-border:#29445e;--amor-glow:rgba(45,154,238,.19)}
@@ -616,6 +751,15 @@ body:not(:has(#theme-toggle:checked)) #analytics .an-hero-copy{background:rgba(2
  #analytics .an-hero{min-height:185px!important}
 }
 @media(max-width:380px){#food .food-summary-content{padding-top:134px!important}#food .food-hero-message{width:47%!important}#food .food-ring strong{font-size:16px!important}}
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style><style id="amor-v48-art-integration">
 /* v48 — integrated art direction, no application logic changes */
 #food .food-summary,#basket .basket-hero,#basket .basket-cook,#analytics .an-hero,#meds .med-hero,#food .food-recipes-hero,#food .food-recipe-banner{position:relative;isolation:isolate;background-color:#0c2032!important;background-image:radial-gradient(ellipse at 89% 48%,rgba(23,150,146,.21),transparent 46%),radial-gradient(ellipse at 72% 98%,rgba(22,98,179,.14),transparent 49%),linear-gradient(115deg,#1a344d 0%,#0c1c31 62%,#0a1b2c 100%)!important;box-shadow:inset 0 1px rgba(255,255,255,.055),0 14px 32px rgba(0,0,0,.15)!important;border:1px solid rgba(112,159,192,.19)!important}
@@ -627,6 +771,15 @@ body:not(:has(#theme-toggle:checked)) #analytics .an-hero-copy{background:rgba(2
 #food .food-recipe-banner img.amor-food-clean,#food .food-recipes-hero img.amor-food-clean{-webkit-mask-image:none!important;mask-image:none!important}
 #meds .med-hero{min-height:190px!important}#meds .med-hero-robot{height:175px!important}#analytics .an-hero{min-height:190px!important}#basket .basket-hero{min-height:180px!important}#food .food-recipe-banner{min-height:145px!important}#food .food-recipe-banner>span{z-index:2;position:relative}#food .food-recipe-banner img{z-index:1;position:relative}#food .food-rings{position:relative;z-index:2}#food .food-summary{min-height:272px!important}#food .food-hero-visual{right:-4px!important;bottom:-4px!important}#food .food-hero-message{right:27%!important}
 @media(max-width:700px){#food .food-summary{min-height:310px!important}#food .food-hero-visual{right:0!important;top:0!important;bottom:auto!important;height:165px!important;width:51%!important}#food .food-hero-message{left:14px!important;right:auto!important}#meds .med-hero{min-height:160px!important}#meds .med-hero-robot{height:145px!important}}
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style><style id="amor-v49-art-direction">
 /* v49: quiet, consistent image art direction. Visual-only changes. */
 #food .food-summary,#basket .basket-hero,#basket .basket-cook,#analytics .an-hero,#meds .med-hero,#food .food-recipes-hero{
@@ -675,6 +828,15 @@ body:not(:has(#theme-toggle:checked)) #analytics .an-hero-copy{background:rgba(2
  #meds .med-hero-robot{height:145px!important;width:34%!important;max-width:34%!important;right:3px!important}
  #meds .med-hero>div:first-child{max-width:70%!important}
 }
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style><style id="amor-v50-final-visual">
 /* Consistent illustrated panels: no harsh picture edges */
 #food .food-hero-visual, #basket .basket-hero-robot, #meds .med-hero-robot{pointer-events:none}
@@ -696,6 +858,15 @@ body:not(:has(#theme-toggle:checked)) #analytics .an-hero-copy{background:rgba(2
  #analytics .an-hero-chart{max-width:120px;font-size:10px!important;padding:7px!important}
  #meds .med-hero-robot{right:0!important}
 }
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style>
 <style id="amor-v51-scenes">
 /* AMOR v51: integrated character scenes, no UI controls changed */
@@ -709,6 +880,15 @@ body:not(:has(#theme-toggle:checked)) #analytics .an-hero-copy{background:rgba(2
 #meds .med-hero-robot img{object-fit:contain!important;object-position:right bottom!important;filter:none!important}
 .daily-insights .amor-wave{object-fit:contain;object-position:right bottom;filter:none}
 @media(max-width:600px){#basket .basket-hero-robot img{width:145px;height:145px}#food .food-summary .amor-food-clean{opacity:.88}}
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style>
 
 
@@ -761,6 +941,15 @@ body:not(:has(#theme-toggle:checked)) #analytics .an-hero-copy{background:rgba(2
 }
 body.light #basket .basket-hero-robot img.amor-pose-light,body.light #basket .basket-cook>img.amor-pose-light,body.light #analytics .an-hero>img.amor-pose-light{display:block!important}
 body.light #basket .basket-hero-robot img.amor-pose-dark,body.light #basket .basket-cook>img.amor-pose-dark,body.light #analytics .an-hero>img.amor-pose-dark{display:none!important}
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style>
 
 <style id="amor-v55-food-focused">
@@ -839,6 +1028,15 @@ body.light #basket .basket-hero-robot img.amor-pose-dark,body.light #basket .bas
  #food .food-recipes-hero>img{width:39%!important}
  #food .food-recipes-hero>div:first-child{max-width:63%!important}
 }
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style>
 
 <style id="amor-v59-nutrition-unified-scenes">
@@ -873,6 +1071,15 @@ body.light #basket .basket-hero-robot img.amor-pose-dark,body.light #basket .bas
  #food .food-recipe-banner,#food .food-recipes-hero{background-position:65% center!important}
  #food .food-recipes-hero>div:first-child{max-width:62%!important}
 }
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style>
 <style>
 /* v60: actual composited image layers, independent of legacy background overrides */
@@ -884,6 +1091,15 @@ body.light #basket .basket-hero-robot img.amor-pose-dark,body.light #basket .bas
 #food .food-recipe-banner>img.amor-food-clean,#food .food-recipes-hero>img.amor-food-clean{display:none!important;}
 #food .food-recipe-banner::before,#food .food-recipe-banner::after,#food .food-recipes-hero::before,#food .food-recipes-hero::after{content:none!important;}
 @media(max-width:600px){#food .food-recipe-banner>img.amor-v60-scene,#food .food-recipes-hero>img.amor-v60-scene{object-position:58% center!important;}#food .food-recipe-banner>span,#food .food-recipes-hero>div:first-of-type{max-width:65%!important;}}
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style>
 <style id="amor-v61-recipe-framing">
 /* Desktop: keep the entire chef in frame, preserving left-side readable text. */
@@ -892,6 +1108,15 @@ body.light #basket .basket-hero-robot img.amor-pose-dark,body.light #basket .bas
 #food .food-summary .food-hero-message{right:25%!important;}
 @media(max-width:700px){#food .food-recipe-banner>span,#food .food-recipes-hero>div:first-of-type{max-width:60%!important;}}
 @media(max-width:440px){#food .food-recipe-banner>img.amor-v60-scene,#food .food-recipes-hero>img.amor-v60-scene{object-position:72% center!important;}#food .food-recipe-banner>span,#food .food-recipes-hero>div:first-of-type{max-width:62%!important;}}
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style>
 <style id="amor-v62-framing">
 /* Single coherent background scene, not a separate cropped robot cutout. */
@@ -914,6 +1139,15 @@ body.light #basket .basket-hero-robot img.amor-pose-dark,body.light #basket .bas
  #food .food-recipes-hero>div:first-of-type{max-width:62%!important;}
  #food .food-summary .food-hero-message{right:18%!important;}
 }
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style>
 
 <style id="amor-v63-seamless">
@@ -925,6 +1159,15 @@ body.light #basket .basket-hero-robot img.amor-pose-dark,body.light #basket .bas
 #food .food-summary .food-hero-message{right:35%!important;top:14px!important;}
 @media(max-width:700px){#food .food-summary .food-hero-message{right:30%!important;}#food .food-recipe-banner>img.amor-v60-scene,#food .food-recipes-hero>img.amor-v60-scene{object-position:65% center!important;}}
 @media(max-width:440px){#food .food-summary .food-hero-message{right:24%!important;}#food .food-recipe-banner>img.amor-v60-scene,#food .food-recipes-hero>img.amor-v60-scene{object-position:72% center!important;}}
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style>
 <style id="amor-v64-chef-banner">
 #food .food-recipe-banner,#food .food-recipes-hero{position:relative!important;isolation:isolate!important;overflow:hidden!important;background:#122b3d!important;border:1px solid #304d64!important;border-radius:21px!important;min-height:164px!important;padding:20px 22px!important;display:flex!important;align-items:center!important}
@@ -937,6 +1180,15 @@ body.light #basket .basket-hero-robot img.amor-pose-dark,body.light #basket .bas
 #food .food-recipe-banner small,#food .food-recipes-hero p{color:#b8cde0!important}
 #food .food-recipe-banner em{background:#17b963!important;color:white!important}
 @media(max-width:620px){#food .food-recipe-banner,#food .food-recipes-hero{min-height:142px!important;padding:15px 16px!important}#food .food-recipe-banner>span,#food .food-recipes-hero>div:first-of-type{max-width:63%!important;width:63%!important;flex-basis:63%!important}#food .food-recipe-banner>img.amor-v60-scene,#food .food-recipes-hero>img.amor-v60-scene{object-position:75% center!important}#food .food-recipes-hero p{font-size:11px!important;line-height:1.45!important}#food .food-recipes-hero small{font-size:9px!important}}
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style><style id="amor-v65-final-banner">
 #food #foodRecipeOpen.food-recipe-banner,
 #food #foodRecipesView .food-recipes-hero.card{
@@ -979,6 +1231,15 @@ body.light #basket .basket-hero-robot img.amor-pose-dark,body.light #basket .bas
  width:66%!important;max-width:66%!important;flex-basis:66%!important}
  #food #foodRecipesView .food-recipes-hero p{font-size:11px!important;line-height:1.4!important}
 }
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style>
 <style id="amor-v66-kitchen-real-scene">
 /* A continuous warm kitchen scene. Content stays live and clickable. */
@@ -1015,12 +1276,30 @@ body.light #basket .basket-hero-robot img.amor-pose-dark,body.light #basket .bas
  flex-basis:59%!important;width:59%!important;max-width:59%!important}
  #food .food-recipes-hero p{font-size:11px!important;line-height:1.45!important}
 }
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style><style id="amor-v67-recommendations">
 #food #foodRecipesView .food-recipes-hero.card{background:#102a3a!important;min-height:180px!important}
 #food #foodRecipesView .food-recipes-hero img.amor-v60-scene{object-position:center center!important}
 #food #foodRecipesView .food-recipes-hero::before{background:linear-gradient(90deg,rgba(11,37,51,.23) 0%,rgba(11,37,51,.08) 52%,transparent 78%)!important}
 #food #foodRecipesView .food-recipes-hero>div:first-of-type{max-width:56%!important;width:56%!important;flex-basis:56%!important}
 @media(max-width:620px){#food #foodRecipesView .food-recipes-hero.card{min-height:158px!important}#food #foodRecipesView .food-recipes-hero>div:first-of-type{max-width:59%!important;width:59%!important;flex-basis:59%!important}}
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style><style id="amor-basket-v68">
 /* Reference-matched basket composition: one integrated background, live UI foreground. */
 #basket .basket-hero,#basket .basket-hero.card,
@@ -1056,6 +1335,15 @@ body:has(#theme-toggle:checked) #basket .basket-hero{
  #basket .basket-hero p{font-size:11px!important;max-width:200px!important}
  #basket .basket-hero button{font-size:10px!important;padding:9px 10px!important}
 }
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style><style id="amor-v70-basket-integrated">
 /* Single clean banner image: no embedded footer text, no exposed image edge. */
 #basket .basket-hero,#basket .basket-hero.card,
@@ -1081,6 +1369,15 @@ body:has(#theme-toggle:checked) #basket .basket-hero{
   background-size:100% 100%!important;background-position:center!important}
  #basket .basket-hero>div:first-child{flex:0 0 57%!important;max-width:57%!important}
 }
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style>
 <style id="amor-v71-basket-cooking-scene">
 /* The cooking suggestion uses the same seamless illustration treatment as Nutrition. */
@@ -1108,6 +1405,15 @@ body:has(#theme-toggle:checked) #basket .basket-hero{
  #basket .basket-cook>div:first-child{max-width:59%!important;flex-basis:59%!important}
  #basket .basket-cook::before{background:linear-gradient(90deg,#102d3a 0%,rgba(16,45,58,.95) 36%,rgba(16,45,58,.4) 65%,transparent 85%)!important}
 }
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style>
 
 <style id="amor-v73-analytics-approved">
@@ -1184,6 +1490,15 @@ body:has(#theme-toggle:checked) #basket .basket-hero{
  #analytics .an-hero-copy{width:58%!important;font-size:11px!important}
  #analytics .an-chart-a{left:10%!important}
 }
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style>
 
 <style id="amor-v74-analytics-scene-fix">
@@ -1205,6 +1520,15 @@ body:has(#theme-toggle:checked) #basket .basket-hero{
 @media(max-width:560px){
  #analytics .an-hero>img.an-scene-v74{width:76%!important;object-position:60% center!important}
 }
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style>
 <style id="amor-v75-analytics-advice">
 /* Integrate the advice artwork into the full card, without affecting its live advice. */
@@ -1218,6 +1542,15 @@ body:has(#theme-toggle:checked) #basket .basket-hero{
 #analytics .an-insight-row img.amor-pose-light,#analytics .an-insight-row img.amor-pose-dark{display:none!important}
 #analytics .an-insight>.mini{max-width:65%!important;color:#b4c5da!important;font-size:11px!important;margin:14px 0 0!important}
 @media(max-width:600px){#analytics .an-insight{min-height:205px!important;padding:17px 15px!important}#analytics .an-insight>img.an-advice-scene-v75{width:75%!important;object-position:60% center!important}#analytics .an-insight::before{background:linear-gradient(90deg,#101d30 0%,#101d30 29%,rgba(16,29,48,.96) 41%,rgba(16,29,48,.57) 66%,transparent 93%)!important}#analytics .an-insight-row,#analytics .an-insight>.mini{max-width:66%!important}}
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style>
 
 <style id="amor-v77-medicine-final">
@@ -1230,6 +1563,15 @@ body:has(#theme-toggle:checked) #basket .basket-hero{
 #meds .med-hero-robot img{display:block!important;position:absolute!important;right:0!important;bottom:0!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:contain!important;object-position:right bottom!important;filter:none!important}
 @media(max-width:700px){#meds .med-hero{min-height:205px!important;padding:19px 17px!important}#meds .med-hero-robot{width:48%!important;max-width:48%!important}#meds .med-hero>div:first-child{max-width:61%!important}}
 @media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero-robot{width:50%!important;max-width:50%!important}#meds .med-hero>div:first-child{max-width:63%!important}}
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style>
 </head><body><div class="app"><div class="top"><div><div class="hello" id="greeting">Доброе утро! 🌷</div><div class="date" id="date"></div></div><div class="actions"><input aria-label="Ночная тема" id="theme-toggle" style="position:absolute;opacity:0;width:1px;height:1px" type="checkbox"/><label class="iconbtn theme-switch" for="theme-toggle" title="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></label><button class="iconbtn" onclick="alert('Настройки добавим на следующем этапе')" title="Настройки">☰</button></div></div>
 <section class="screen active" id="home"><div aria-label="Утверждённый иллюстративный баннер Кости и Амора" class="hero-reference" role="img"><img alt="Костя и Амор, светлая тема" class="hero-light" src="amor_hero_light.jpg"/><img alt="Костя и Амор, ночная тема" class="hero-dark" src="amor_hero_dark.jpg"/></div><div class="grid vitals-grid">
@@ -1288,7 +1630,7 @@ body:has(#theme-toggle:checked) #basket .basket-hero{
  </section>
 <section class="screen" id="analytics"><header class="an-header"><h1>Аналитика <span>▥</span></h1><p>Ваш прогресс и статистика</p></header><div class="an-period" role="group" aria-label="Период аналитики"><button data-days="7" class="selected">Неделя</button><button data-days="30">Месяц</button><button data-days="90">3 месяца</button><button data-days="365">Год</button></div><section class="an-hero card"><img class="an-scene-v74" src="amor_analytics_scene_v73.jpg" alt="" aria-hidden="true"/><div class="an-hero-copy">Я проанализировал ваши данные и собрал главное!</div><img class="amor-pose-light" src="amor_analytics_light_blend.png" alt="Амор с ноутбуком"/><img class="amor-pose-dark" src="amor_analytics_dark_blend.png" alt="" aria-hidden="true"/><div class="an-hero-glow"></div><div class="an-hero-chart an-chart-a">⌁ <span>По вашим записям</span></div><div class="an-hero-chart an-chart-b">▥ <span>▂▄▆▅█</span></div><div class="an-hero-stars">✦ ✧ ✦</div></section><div class="an-highlights" id="anHighlights">Показатели появятся после сохранения записей.</div><section class="card an-section"><h2><span class="an-number">1</span> Самочувствие и состояние желудка</h2><div class="an-two"><article class="an-mini"><h3>Самочувствие</h3><div id="anMoodStatus" class="an-status">Пока нет записей</div><div id="anMoodGraph" class="an-graph"></div></article><article class="an-mini"><h3>Состояние ЖКТ</h3><div id="anGutStatus" class="an-status">Пока нет записей</div><div id="anGutGraph" class="an-graph"></div></article></div></section><section class="card an-section"><h2><span class="an-number">2</span> Динамика тела <button type="button" class="an-edit" id="anEditVitals">✎ Исправить запись</button></h2><div class="an-two"><article class="an-mini"><h3>Талия</h3><div class="an-value" id="anWaistValue">—</div><div id="anWaistChange" class="an-status">Нет измерений</div><div id="anWaistGraph" class="an-graph"></div></article><article class="an-mini"><h3>Вес</h3><div class="an-value" id="anWeightValue">—</div><div id="anWeightChange" class="an-status">Нет измерений</div><div id="anWeightGraph" class="an-graph"></div></article></div></section><section class="card an-section"><h2><span class="an-number">3</span> Баланс нутриентов</h2><div class="an-nutrients"><div class="an-donut" id="anDonut"><span id="anDonutCenter">—</span></div><div class="an-legend" id="anLegend">Добавьте приёмы пищи, чтобы увидеть баланс БЖУ.</div></div></section><section class="card an-insight"><img class="an-advice-scene-v75" src="amor_advice_heart_v76.png" alt="" aria-hidden="true"/><h2>✦ Советы Амора</h2><div class="an-insight-row"><div id="anAdvice">Когда появятся записи за несколько дней, я помогу увидеть изменения. 💙</div><img class="amor-pose-light" src="amor_analytics_light_blend.png" alt="Амор с ноутбуком"/><img class="amor-pose-dark" src="amor_analytics_dark_blend.png" alt="" aria-hidden="true"/></div><p class="mini">Анализ основан на ваших записях и не заменяет консультацию врача.</p></section></section><p class="demo"></p><section class="screen" id="meds">
 <header class="med-head"><h1>Лекарства <span>💊</span></h1><p>Назначения, приёмы и история лечения</p></header>
-<div class="card med-hero"><div><strong>Медицинский дневник Кости</strong><p>Отмечай фактический приём одним нажатием. Все записи сохраняются на этом устройстве.</p></div><span class="med-hero-icon med-hero-robot"><img src="amor_medicine_blend.png" alt="Амор с лекарством — помощник Кости"/></span></div>
+<div class="card med-hero"><div><strong>Медицинский дневник Кости</strong><p>Отмечай фактический приём одним нажатием. Все записи сохраняются на этом устройстве.</p></div></div>
 <div class="med-actions"><button id="medAdd" type="button">＋ Добавить лекарство</button><button id="medAppointmentAdd" type="button">＋ Приём врача</button></div>
 <div class="med-tabs"><button type="button" class="active" data-medtab="current">Текущие</button><button type="button" data-medtab="history">История приёмов</button><button type="button" data-medtab="visits">Врачи и документы</button><button type="button" data-medtab="archive">Архив курсов</button></div>
 <div id="medCurrent" class="med-view"></div><div id="medHistory" class="med-view" hidden></div><div id="medVisits" class="med-view" hidden></div><div id="medArchive" class="med-view" hidden></div>
@@ -1701,6 +2043,15 @@ if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.
 }
 </script><style>
 .smart-dialog{width:min(630px,calc(100vw - 24px));max-height:85vh;overflow:auto;border:1px solid var(--line);border-radius:24px;background:var(--card);color:var(--text);padding:22px;box-shadow:0 22px 80px #0009}.smart-dialog::backdrop{background:#020914ba;backdrop-filter:blur(5px)}.smart-top{display:flex;align-items:center;justify-content:space-between;gap:12px}.smart-top h2{margin:0;font-size:21px}.smart-x{border:0;border-radius:50%;width:36px;height:36px;background:var(--soft);color:var(--text);font-size:20px}.smart-note{font-size:12px;color:var(--muted);line-height:1.6}.smart-list{display:grid;gap:10px;margin:16px 0}.smart-item{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:14px;padding:12px;background:var(--bg)}.smart-item>div{flex:1;min-width:0}.smart-item strong{font-size:13px}.smart-item small{display:block;color:var(--muted);font-size:11px;margin-top:4px}.smart-item input{accent-color:#39c975;width:18px;height:18px}.smart-action{border:0;border-radius:13px;background:#59d49a;color:#062016;padding:13px 18px;font-weight:800;width:100%}.smart-pill{display:inline-block;background:var(--soft);color:var(--green);padding:5px 9px;border-radius:20px;font-size:11px}.smart-item button{border:1px solid var(--line);border-radius:11px;background:var(--card);color:var(--text);padding:9px;font-size:12px}.smart-fav{cursor:pointer;font-size:20px}.smart-item .smart-fav{color:#f4b943}.smart-empty{padding:15px;color:var(--muted);font-size:13px}
+
+/* v78: illustrated medicine scene integrated behind content, no standalone robot image */
+#meds .med-hero{position:relative!important;min-height:248px!important;overflow:hidden!important;isolation:isolate!important;background:#162d46!important}
+#meds .med-hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:url("amor_medicine_hero_v78.jpg") center center / cover no-repeat!important;pointer-events:none!important}
+#meds .med-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(22,45,70,.94) 0%,rgba(22,45,70,.74) 35%,rgba(22,45,70,.1) 68%,transparent 90%)!important;pointer-events:none!important}
+#meds .med-hero>div:first-child{position:relative!important;z-index:3!important;max-width:54%!important}
+#meds .med-hero-robot{display:none!important}
+@media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
+@media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style>
 <script>
 /* Amor 29: pantry matching and availability independent of low-stock status. */
