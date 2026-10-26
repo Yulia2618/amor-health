@@ -1016,6 +1016,41 @@ body.light #basket .basket-hero-robot img.amor-pose-dark,body.light #basket .bas
 #food #foodRecipesView .food-recipes-hero::before{background:linear-gradient(90deg,rgba(11,37,51,.23) 0%,rgba(11,37,51,.08) 52%,transparent 78%)!important}
 #food #foodRecipesView .food-recipes-hero>div:first-of-type{max-width:56%!important;width:56%!important;flex-basis:56%!important}
 @media(max-width:620px){#food #foodRecipesView .food-recipes-hero.card{min-height:158px!important}#food #foodRecipesView .food-recipes-hero>div:first-of-type{max-width:59%!important;width:59%!important;flex-basis:59%!important}}
+</style><style id="amor-basket-v68">
+/* Reference-matched basket composition: one integrated background, live UI foreground. */
+#basket .basket-hero,#basket .basket-hero.card,
+body:has(#theme-toggle:checked) #basket .basket-hero{
+ position:relative!important;isolation:isolate!important;overflow:hidden!important;
+ display:flex!important;align-items:center!important;min-height:184px!important;
+ padding:20px 19px!important;border-radius:20px!important;
+ border:1px solid #294760!important;
+ background:#142b43 url('amor_basket_hero_v68.jpg') center center / cover no-repeat!important;
+ box-shadow:0 10px 24px rgba(0,0,0,.15)!important;
+}
+#basket .basket-hero::before{content:""!important;position:absolute!important;inset:0!important;
+ background:linear-gradient(90deg,rgba(15,32,52,.22),transparent 66%)!important;
+ z-index:0!important;pointer-events:none!important;display:block!important}
+#basket .basket-hero::after{display:none!important}
+#basket .basket-hero>div:first-child{position:relative!important;z-index:2!important;
+ flex:0 0 59%!important;max-width:59%!important;min-width:0!important}
+#basket .basket-hero-robot{display:none!important}
+#basket .basket-hero strong{font-size:15px!important;color:#f6faff!important}
+#basket .basket-hero small{background:#063b32!important;color:#4ee8a0!important;font-size:10px!important}
+#basket .basket-hero p{max-width:255px!important;color:#c1d5e8!important;line-height:1.6!important}
+#basket .basket-hero button{background:#06182a!important;color:#fff!important;border:0!important;
+ border-radius:22px!important;padding:10px 13px!important;cursor:pointer!important}
+#basket .basket-panel{border-radius:16px!important;background:linear-gradient(135deg,#142b43,#0b1b30)!important;
+ border:1px solid #243e58!important;margin-top:11px!important;padding:13px 14px!important}
+#basket .basket-panel-head h3{font-size:13px!important}
+#basket .basket-num{background:#a5f0bb!important;color:#064b34!important}
+#basket .basket-panel-head>button{color:#35bff6!important}
+@media(max-width:520px){
+ #basket .basket-hero{min-height:165px!important;padding:14px!important;background-position:66% center!important}
+ #basket .basket-hero>div:first-child{flex-basis:58%!important;max-width:58%!important}
+ #basket .basket-hero strong{font-size:13px!important}
+ #basket .basket-hero p{font-size:11px!important;max-width:200px!important}
+ #basket .basket-hero button{font-size:10px!important;padding:9px 10px!important}
+}
 </style></head><body><div class="app"><div class="top"><div><div class="hello" id="greeting">Доброе утро! 🌷</div><div class="date" id="date"></div></div><div class="actions"><input aria-label="Ночная тема" id="theme-toggle" style="position:absolute;opacity:0;width:1px;height:1px" type="checkbox"/><label class="iconbtn theme-switch" for="theme-toggle" title="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></label><button class="iconbtn" onclick="alert('Настройки добавим на следующем этапе')" title="Настройки">☰</button></div></div>
 <section class="screen active" id="home"><div aria-label="Утверждённый иллюстративный баннер Кости и Амора" class="hero-reference" role="img"><img alt="Костя и Амор, светлая тема" class="hero-light" src="amor_hero_light.jpg"/><img alt="Костя и Амор, ночная тема" class="hero-dark" src="amor_hero_dark.jpg"/></div><div class="grid vitals-grid">
 <div class="card metric metric-weight"><div class="metric-head"><span class="metric-icon">⚖</span><span class="metric-name">Вес</span></div><div class="metric-main"><span id="weightDisplay">—</span><small> кг</small></div><div class="metric-bottom"><div><div class="metric-change" id="weightDelta">Пока нет сравнения</div><div class="metric-detail" id="weightPrev">Добавь два измерения</div></div></div><div class="spark" hidden="" id="weightSpark"></div></div>
