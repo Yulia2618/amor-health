@@ -836,53 +836,38 @@ body.light #basket .basket-hero-robot img.amor-pose-dark,body.light #basket .bas
 }
 </style>
 
-<style id="amor-v56-food-composition">
-/* Nutrition only. The illustration is a feathered decorative backdrop, not a rectangular tile. */
-#food .food-summary{isolation:isolate!important;min-height:258px!important;background:linear-gradient(110deg,#0a2b3b 0%,#092c39 55%,#123d3b 100%)!important;overflow:hidden!important}
-#food .food-summary::before{content:""!important;position:absolute!important;inset:0!important;z-index:0!important;background:radial-gradient(ellipse at 85% 45%,rgba(255,172,68,.18),transparent 50%)!important;pointer-events:none!important}
-#food .food-summary::after{content:none!important}
-#food .food-summary .food-hero-visual{z-index:1!important;right:0!important;top:0!important;bottom:0!important;width:50%!important;height:100%!important;overflow:visible!important;mask-image:none!important;-webkit-mask-image:none!important;background:none!important}
-#food .food-summary .food-hero-visual img{position:absolute!important;right:0!important;bottom:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center 43%!important;max-height:none!important;filter:none!important}
-#food .food-summary-content{position:relative!important;z-index:3!important;width:67%!important;padding:0!important}
+<style id="amor-v59-nutrition-unified-scenes">
+/* One full-width illustration per banner. Functional UI remains real HTML. */
+#food .food-summary{position:relative!important;isolation:isolate!important;overflow:hidden!important;min-height:250px!important;background:#0a2b3b url("amor_food_banner_v59.jpg") center center / cover no-repeat!important}
+#food .food-summary::before,#food .food-summary::after{content:none!important}
+#food .food-summary .food-hero-visual{display:none!important}
+#food .food-summary-content{position:relative!important;z-index:2!important;width:72%!important;max-width:72%!important;padding:0!important}
+#food .food-rings{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:12px!important;margin-top:27px!important}
 #food .food-date-row{width:100%!important}
-#food .food-rings{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:12px!important;margin-top:30px!important}
-#food .food-hero-message{z-index:4!important;right:24%!important;top:17px!important;width:174px!important;max-width:24%!important;left:auto!important;min-width:0!important}
-#food .food-recipe-banner{isolation:isolate!important;min-height:155px!important;background:linear-gradient(100deg,#142b45,#0b3340)!important;overflow:hidden!important}
-#food .food-recipe-banner::before{content:""!important;position:absolute!important;inset:0!important;z-index:0!important;background:radial-gradient(ellipse at 80% 55%,#1b6b5a38,transparent 65%)!important}
-#food .food-recipe-banner::after{content:none!important}
-#food .food-recipe-banner>span{position:relative!important;z-index:3!important;max-width:66%!important}
-#food .food-recipe-banner>img{position:absolute!important;right:0!important;bottom:0!important;top:0!important;width:37%!important;height:100%!important;object-fit:cover!important;object-position:center center!important;mask-image:none!important;-webkit-mask-image:none!important;opacity:1!important;filter:none!important}
-@media(max-width:700px){#food .food-summary{min-height:240px!important}#food .food-summary-content{width:70%!important}#food .food-summary .food-hero-visual{width:48%!important}#food .food-hero-message{right:23%!important;max-width:27%!important}#food .food-rings{gap:6px!important}}
-@media(max-width:440px){#food .food-summary{min-height:294px!important}#food .food-summary-content{width:100%!important;padding-top:124px!important}#food .food-summary .food-hero-visual{top:0!important;bottom:auto!important;height:69%!important;width:62%!important}#food .food-summary .food-hero-visual img{object-fit:cover!important;object-position:center 37%!important}#food .food-hero-message{top:13px!important;left:13px!important;right:auto!important;max-width:44%!important;width:44%!important}#food .food-rings{margin-top:13px!important;gap:4px!important}#food .food-recipe-banner>img{width:43%!important}#food .food-recipe-banner>span{max-width:61%!important}}
-</style>
-
-<style id="amor-v57-food-precise-layout">
-/* A portrait illustration is shown at its native aspect ratio; never cropped or zoomed. */
-#food .food-summary{position:relative!important;isolation:isolate!important;overflow:hidden!important;min-height:250px!important;background:linear-gradient(108deg,#0c2c3c 0%,#0c2c3c 62%,#123c38 100%)!important}
-#food .food-summary .food-hero-visual{position:absolute!important;inset:0 0 0 auto!important;width:42%!important;height:100%!important;z-index:1!important;overflow:hidden!important;mask-image:none!important;-webkit-mask-image:none!important}
-#food .food-summary .food-hero-visual img{position:absolute!important;right:0!important;bottom:0!important;top:auto!important;width:auto!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:right bottom!important;filter:none!important}
-#food .food-summary .food-hero-visual:before{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,#0c2c3c 0%,rgba(12,44,60,.62) 12%,transparent 48%);pointer-events:none}
-#food .food-summary-content{position:relative!important;z-index:3!important;width:72%!important;max-width:72%!important;padding:0!important}
-#food .food-hero-message{position:absolute!important;top:17px!important;left:auto!important;right:27%!important;z-index:5!important;width:175px!important;max-width:23%!important;box-sizing:border-box!important}
-#food .food-rings{position:relative!important;z-index:3!important}
-#food .food-recipe-banner{position:relative!important;isolation:isolate!important;overflow:hidden!important;min-height:150px!important;background:linear-gradient(105deg,#17304a,#0e3540)!important}
-#food .food-recipe-banner>img{position:absolute!important;right:0!important;bottom:0!important;top:auto!important;width:auto!important;height:100%!important;max-width:38%!important;object-fit:contain!important;object-position:right bottom!important;mask-image:none!important;-webkit-mask-image:none!important;filter:none!important;opacity:1!important}
-#food .food-recipe-banner:after{content:""!important;position:absolute!important;inset:0!important;z-index:2!important;background:linear-gradient(90deg,transparent 65%,rgba(14,53,64,.12) 75%,transparent 100%)!important;pointer-events:none!important}
-#food .food-recipe-banner>span{position:relative!important;z-index:3!important;max-width:65%!important}
-#food .food-recipes-hero>img{position:absolute!important;right:0!important;bottom:0!important;top:auto!important;height:100%!important;width:auto!important;max-width:36%!important;object-fit:contain!important;object-position:right bottom!important}
-@media(max-width:700px){#food .food-summary .food-hero-visual{width:45%!important}#food .food-summary-content{width:73%!important;max-width:73%!important}#food .food-hero-message{right:23%!important;max-width:29%!important;width:140px!important}}
-@media(max-width:440px){#food .food-summary{min-height:300px!important}#food .food-summary .food-hero-visual{top:0!important;bottom:auto!important;width:56%!important;height:64%!important}#food .food-summary-content{width:100%!important;max-width:100%!important;padding-top:115px!important}#food .food-hero-message{top:12px!important;left:12px!important;right:auto!important;width:43%!important;max-width:43%!important}#food .food-recipe-banner>img{max-width:43%!important}#food .food-recipes-hero>img{max-width:42%!important}}
-</style>
-
-<style id="amor-v58-food-soft-blends">
-/* Blend illustration edges into their cards without changing functional markup. */
-#food .food-summary .food-hero-visual:before{background:linear-gradient(90deg,#0c2c3c 0%,rgba(12,44,60,.90) 8%,rgba(12,44,60,.45) 23%,transparent 54%)!important}
-#food .food-summary .food-hero-visual img{mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.18) 8%,rgba(0,0,0,.72) 24%,#000 42%)!important;-webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.18) 8%,rgba(0,0,0,.72) 24%,#000 42%)!important}
-#food .food-recipe-banner>img,#food .food-recipes-hero>img{mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.12) 14%,rgba(0,0,0,.78) 35%,#000 56%)!important;-webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.12) 14%,rgba(0,0,0,.78) 35%,#000 56%)!important}
-#food .food-recipe-banner:after{background:linear-gradient(90deg,transparent 64%,rgba(14,53,64,.2) 76%,transparent 94%)!important}
-#food .food-recipes-hero{overflow:hidden!important;isolation:isolate!important}
-#food .food-recipes-hero>div:first-child{position:relative!important;z-index:3!important}
-@media(max-width:440px){#food .food-summary .food-hero-visual img{mask-image:linear-gradient(to right,transparent 0%,#000 38%)!important;-webkit-mask-image:linear-gradient(to right,transparent 0%,#000 38%)!important}}
+#food .food-hero-message{position:absolute!important;top:17px!important;left:auto!important;right:23%!important;width:178px!important;max-width:26%!important;z-index:4!important;box-sizing:border-box!important}
+#food .food-recipe-banner{position:relative!important;isolation:isolate!important;overflow:hidden!important;min-height:155px!important;background:#142f40 url("amor_recipe_banner_v59.jpg") center center / cover no-repeat!important}
+#food .food-recipe-banner::before,#food .food-recipe-banner::after{content:none!important}
+#food .food-recipe-banner>img{display:none!important}
+#food .food-recipe-banner>span{position:relative!important;z-index:2!important;max-width:62%!important}
+#food .food-recipes-hero{position:relative!important;isolation:isolate!important;overflow:hidden!important;min-height:200px!important;background:#152e42 url("amor_recipe_banner_v59.jpg") center center / cover no-repeat!important}
+#food .food-recipes-hero::before,#food .food-recipes-hero::after{content:none!important}
+#food .food-recipes-hero>img{display:none!important}
+#food .food-recipes-hero>div:first-child{position:relative!important;z-index:3!important;max-width:62%!important}
+@media(max-width:700px){
+ #food .food-summary{min-height:230px!important;background-position:60% center!important}
+ #food .food-summary-content{width:75%!important;max-width:75%!important}
+ #food .food-hero-message{right:19%!important;max-width:30%!important}
+ #food .food-rings{gap:6px!important;margin-top:22px!important}
+ #food .food-recipe-banner,#food .food-recipes-hero{background-position:63% center!important}
+}
+@media(max-width:440px){
+ #food .food-summary{min-height:300px!important;background-size:auto 66%!important;background-position:right top!important;background-color:#0a2b3b!important}
+ #food .food-summary-content{width:100%!important;max-width:100%!important;padding-top:116px!important}
+ #food .food-hero-message{top:12px!important;left:12px!important;right:auto!important;width:44%!important;max-width:44%!important}
+ #food .food-rings{margin-top:13px!important;gap:4px!important}
+ #food .food-recipe-banner,#food .food-recipes-hero{background-position:65% center!important}
+ #food .food-recipes-hero>div:first-child{max-width:62%!important}
+}
 </style>
 </head><body><div class="app"><div class="top"><div><div class="hello" id="greeting">Доброе утро! 🌷</div><div class="date" id="date"></div></div><div class="actions"><input aria-label="Ночная тема" id="theme-toggle" style="position:absolute;opacity:0;width:1px;height:1px" type="checkbox"/><label class="iconbtn theme-switch" for="theme-toggle" title="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></label><button class="iconbtn" onclick="alert('Настройки добавим на следующем этапе')" title="Настройки">☰</button></div></div>
 <section class="screen active" id="home"><div aria-label="Утверждённый иллюстративный баннер Кости и Амора" class="hero-reference" role="img"><img alt="Костя и Амор, светлая тема" class="hero-light" src="amor_hero_light.jpg"/><img alt="Костя и Амор, ночная тема" class="hero-dark" src="amor_hero_dark.jpg"/></div><div class="grid vitals-grid">
