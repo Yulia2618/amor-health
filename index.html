@@ -975,7 +975,42 @@ body.light #basket .basket-hero-robot img.amor-pose-dark,body.light #basket .bas
  #food #foodRecipesView .food-recipes-hero p{font-size:11px!important;line-height:1.4!important}
 }
 </style>
-</head><body><div class="app"><div class="top"><div><div class="hello" id="greeting">Доброе утро! 🌷</div><div class="date" id="date"></div></div><div class="actions"><input aria-label="Ночная тема" id="theme-toggle" style="position:absolute;opacity:0;width:1px;height:1px" type="checkbox"/><label class="iconbtn theme-switch" for="theme-toggle" title="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></label><button class="iconbtn" onclick="alert('Настройки добавим на следующем этапе')" title="Настройки">☰</button></div></div>
+<style id="amor-v66-kitchen-real-scene">
+/* A continuous warm kitchen scene. Content stays live and clickable. */
+#food .food-recipe-banner,#food .food-recipes-hero{
+ position:relative!important;isolation:isolate!important;overflow:hidden!important;
+ background:#0d2b39!important;min-height:166px!important;
+ border-radius:21px!important;border:1px solid #2c5062!important;
+ padding:20px 22px!important;display:flex!important;align-items:center!important;
+}
+#food .food-recipe-banner img.amor-v60-scene,#food .food-recipes-hero img.amor-v60-scene{
+ display:block!important;position:absolute!important;inset:0!important;
+ width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;
+ object-fit:cover!important;object-position:center!important;
+ opacity:1!important;filter:none!important;transform:none!important;
+ z-index:0!important;pointer-events:none!important;border:0!important;border-radius:0!important;
+}
+#food .food-recipe-banner::before,#food .food-recipes-hero::before{
+ content:""!important;display:block!important;position:absolute!important;inset:0!important;
+ z-index:1!important;pointer-events:none!important;
+ background:linear-gradient(90deg,rgba(9,40,53,.34) 0%,rgba(9,40,53,.16) 46%,transparent 76%)!important;
+}
+#food .food-recipe-banner::after,#food .food-recipes-hero::after{display:none!important}
+#food .food-recipe-banner>span,#food .food-recipes-hero>div:first-of-type{
+ position:relative!important;z-index:2!important;flex:0 0 57%!important;
+ width:57%!important;max-width:57%!important;text-align:left!important;margin:0!important;
+}
+#food .food-recipe-banner>span{display:flex!important;align-items:flex-start!important;flex-direction:column!important;gap:7px!important}
+#food .food-recipe-banner strong,#food .food-recipes-hero strong{color:#4aeb94!important}
+#food .food-recipe-banner small,#food .food-recipes-hero p{color:#d0dfeb!important}
+#food .food-recipe-banner em{background:#0dbb6a!important;color:white!important;border-radius:40px!important;padding:8px 15px!important}
+@media(max-width:620px){
+ #food .food-recipe-banner,#food .food-recipes-hero{min-height:147px!important;padding:15px!important}
+ #food .food-recipe-banner>span,#food .food-recipes-hero>div:first-of-type{
+ flex-basis:59%!important;width:59%!important;max-width:59%!important}
+ #food .food-recipes-hero p{font-size:11px!important;line-height:1.45!important}
+}
+</style></head><body><div class="app"><div class="top"><div><div class="hello" id="greeting">Доброе утро! 🌷</div><div class="date" id="date"></div></div><div class="actions"><input aria-label="Ночная тема" id="theme-toggle" style="position:absolute;opacity:0;width:1px;height:1px" type="checkbox"/><label class="iconbtn theme-switch" for="theme-toggle" title="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></label><button class="iconbtn" onclick="alert('Настройки добавим на следующем этапе')" title="Настройки">☰</button></div></div>
 <section class="screen active" id="home"><div aria-label="Утверждённый иллюстративный баннер Кости и Амора" class="hero-reference" role="img"><img alt="Костя и Амор, светлая тема" class="hero-light" src="amor_hero_light.jpg"/><img alt="Костя и Амор, ночная тема" class="hero-dark" src="amor_hero_dark.jpg"/></div><div class="grid vitals-grid">
 <div class="card metric metric-weight"><div class="metric-head"><span class="metric-icon">⚖</span><span class="metric-name">Вес</span></div><div class="metric-main"><span id="weightDisplay">—</span><small> кг</small></div><div class="metric-bottom"><div><div class="metric-change" id="weightDelta">Пока нет сравнения</div><div class="metric-detail" id="weightPrev">Добавь два измерения</div></div></div><div class="spark" hidden="" id="weightSpark"></div></div>
 <div class="card metric metric-waist"><div class="metric-head"><span class="metric-icon">▤</span><span class="metric-name">Талия</span></div><div class="metric-main"><span id="waistDisplay">—</span><small> см</small></div><div class="metric-bottom"><div><div class="metric-change" id="waistDelta">Пока нет сравнения</div><div class="metric-detail" id="waistPrev">Добавь два измерения</div></div></div><div class="spark" hidden="" id="waistSpark"></div></div>
@@ -999,9 +1034,9 @@ body.light #basket .basket-hero-robot img.amor-pose-dark,body.light #basket .bas
  <div class="food-quick-actions"><button id="quickTopOpen" type="button" class="quick-open">⚡ Быстро записать блюдо — название и граммы →</button><button id="foodManualShortcut" type="button" class="food-manual-shortcut">＋ Добавить вручную</button></div><div class="food-section-title"><h2>Сегодняшнее меню</h2><button id="foodAddOpen">＋ Добавить приём пищи</button></div>
  <div id="foodEntries" class="food-entries" aria-live="polite"></div>
  <div class="food-day-total card"><span>▥ <strong>Итого за день</strong><small id="foodTotalSubtitle">0 ккал</small></span><span class="food-total-note" id="foodTotalNote">Каждый приём пищи имеет значение ♡</span></div>
- <button id="foodRecipeOpen" class="food-recipe-banner card"><img class="amor-v60-scene" src="amor_chef_banner_v65.jpg" alt="" aria-hidden="true"/><span><strong>Что приготовить сегодня?</strong><small>Подберём блюда под ваши цели</small><em>Подобрать →</em></span></button>
+ <button id="foodRecipeOpen" class="food-recipe-banner card"><img class="amor-v60-scene" src="amor_chef_kitchen_v66.jpg" alt="" aria-hidden="true"/><span><strong>Что приготовить сегодня?</strong><small>Подберём блюда под ваши цели</small><em>Подобрать →</em></span></button>
  </div>
- <div id="foodRecipesView" hidden><div class="food-recipes-header"><button class="food-round" id="foodRecipesBack" aria-label="Назад в дневник">←</button><h2>Что приготовить сегодня?</h2></div><div class="food-recipes-hero card"><img class="amor-v60-scene" src="amor_chef_banner_v65.jpg" alt="" aria-hidden="true"/><div><strong>Рекомендации для Кости</strong><p>Подбираем идеи с учётом ваших предпочтений. Калорийность рецептов ориентировочная.</p><small>🌿 Легко　♡ Полезно　★ Вкусно</small></div></div><div class="amor-v42-preview" aria-label="Примеры блюд"><div class="amor-v42-preview-title"><strong>Идеи для вашего меню</strong><span>💚 Бережное приготовление</span></div><div class="amor-v42-photo-grid"><div><img src="food_salmon.jpg" alt="Лосось с овощами"><span>Рыба с овощами</span></div><div><img src="food_chicken.jpg" alt="Курица с овощами"><span>Курица на пару</span></div><div><img src="food_soup.jpg" alt="Тыквенный суп-пюре"><span>Тыквенный суп</span></div><div><img src="food_cottage.jpg" alt="Творог с ягодами"><span>Творог с ягодами</span></div></div><small>Иллюстрации блюд. Рецепты и состав уточняйте в рекомендациях.</small></div><div class="food-filter-row" id="foodRecipeFilters"><button class="selected" data-filter="Все">Все</button><button data-filter="Завтрак">Завтрак</button><button data-filter="Обед">Обед</button><button data-filter="Ужин">Ужин</button><button data-filter="Перекус">Перекус</button></div><div id="foodRecipeList"></div><button class="food-create-recipe card" id="foodCreateOwn"><span><strong>Создать своё блюдо</strong><small>Добавьте блюдо и КБЖУ в дневник</small></span><span>＋</span></button></div>
+ <div id="foodRecipesView" hidden><div class="food-recipes-header"><button class="food-round" id="foodRecipesBack" aria-label="Назад в дневник">←</button><h2>Что приготовить сегодня?</h2></div><div class="food-recipes-hero card"><img class="amor-v60-scene" src="amor_chef_kitchen_v66.jpg" alt="" aria-hidden="true"/><div><strong>Рекомендации для Кости</strong><p>Подбираем идеи с учётом ваших предпочтений. Калорийность рецептов ориентировочная.</p><small>🌿 Легко　♡ Полезно　★ Вкусно</small></div></div><div class="amor-v42-preview" aria-label="Примеры блюд"><div class="amor-v42-preview-title"><strong>Идеи для вашего меню</strong><span>💚 Бережное приготовление</span></div><div class="amor-v42-photo-grid"><div><img src="food_salmon.jpg" alt="Лосось с овощами"><span>Рыба с овощами</span></div><div><img src="food_chicken.jpg" alt="Курица с овощами"><span>Курица на пару</span></div><div><img src="food_soup.jpg" alt="Тыквенный суп-пюре"><span>Тыквенный суп</span></div><div><img src="food_cottage.jpg" alt="Творог с ягодами"><span>Творог с ягодами</span></div></div><small>Иллюстрации блюд. Рецепты и состав уточняйте в рекомендациях.</small></div><div class="food-filter-row" id="foodRecipeFilters"><button class="selected" data-filter="Все">Все</button><button data-filter="Завтрак">Завтрак</button><button data-filter="Обед">Обед</button><button data-filter="Ужин">Ужин</button><button data-filter="Перекус">Перекус</button></div><div id="foodRecipeList"></div><button class="food-create-recipe card" id="foodCreateOwn"><span><strong>Создать своё блюдо</strong><small>Добавьте блюдо и КБЖУ в дневник</small></span><span>＋</span></button></div>
  
 <dialog id="recipeDetailDialog" class="food-dialog recipe-detail" aria-labelledby="recipeDetailTitle"><div class="food-dialog-head"><h3 id="recipeDetailTitle">Рецепт</h3><button type="button" id="recipeDetailClose" class="food-x" aria-label="Закрыть рецепт">✕</button></div><img id="recipeDetailImage" class="recipe-detail-image" src="caesar_batat.jpg" alt="Блюдо"/><p id="recipeDetailMeta" class="recipe-subtitle"></p><h4>Ингредиенты на 1 порцию</h4><ul id="recipeDetailIngredients"></ul><h4>Как приготовить</h4><ol id="recipeDetailSteps"></ol><div class="recipe-care"><strong>💚 Для Кости</strong><div id="recipeDetailCare"></div></div><p class="recipe-subtitle">Рецепт — пример щадящего приготовления. Учитывайте переносимость продуктов и рекомендации гастроэнтеролога. Указанные в подборке КБЖУ ориентировочные и не рассчитаны по этому составу.</p><div class="recipe-actions"><button type="button" id="recipeDetailShare">↗ Поделиться рецептом</button><button type="button" id="recipeDetailBack">Закрыть</button></div><p class="recipe-subtitle" id="recipeShareStatus" aria-live="polite"></p></dialog>
 <dialog id="quickDialog" class="food-dialog quick-dialog">
