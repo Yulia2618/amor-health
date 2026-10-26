@@ -345,6 +345,32 @@ body:has(#theme-toggle:checked) #basket .basket-cook{background:linear-gradient(
 #meds .med-hero-robot{display:none!important}
 @media(max-width:700px){#meds .med-hero{min-height:205px!important}#meds .med-hero::before{background-position:63% center!important}#meds .med-hero>div:first-child{max-width:61%!important}}
 @media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
+
+/* v80 — main page only. Original records and other screens untouched. */
+#home .home-v80-hero{position:relative;isolation:isolate;aspect-ratio:1308/498;background:#0d1427;overflow:hidden}
+#home .home-v80-hero>img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+#home .home-v80-copy{position:absolute;z-index:2;left:35.6%;top:10%;width:34%;height:85%;line-height:1.25;color:#fff;text-align:left;display:flex;flex-direction:column;align-items:flex-start;pointer-events:none;text-shadow:0 1px 5px rgba(0,0,0,.3)}
+#home .home-v80-name{font-size:clamp(17px,4.1vw,39px);font-weight:850;letter-spacing:-.04em;white-space:nowrap}
+#home .home-v80-status{font-size:clamp(10px,2.4vw,22px);font-weight:750;color:#6de779;margin-top:8%;white-space:nowrap}
+#home .home-v80-health{display:flex;align-items:flex-start;gap:9px;margin-top:auto;margin-bottom:15%;font-size:clamp(9px,1.7vw,17px);white-space:nowrap}
+#home .home-v80-health>span{font-size:1.35em;line-height:1.1}
+#home .home-v80-health strong{font-weight:750;display:block}
+#home .home-v80-health small{font-size:.88em;display:block;color:#d4dbe9;margin-top:8px}
+body:not(:has(#theme-toggle:checked)) #home .home-v80-hero{background:#fafafa}
+body:not(:has(#theme-toggle:checked)) #home .home-v80-copy{color:#101c31;text-shadow:none}
+body:not(:has(#theme-toggle:checked)) #home .home-v80-health small{color:#445064}
+#home .daily-insights{position:relative;display:block;min-height:205px;padding:20px 42% 22px 18px;overflow:hidden;background:linear-gradient(112deg,#f6fbff,#e9f9ef)}
+body:has(#theme-toggle:checked) #home .daily-insights{background:linear-gradient(112deg,#17283e,#0d1b30)}
+#home .daily-insights .daily-list{position:relative;z-index:3;max-width:100%;padding:0}
+#home .daily-insights .amor-aside{position:absolute;z-index:1;inset:0;min-height:0;display:block;pointer-events:none;overflow:hidden}
+#home .daily-insights .amor-aside::before{content:'';position:absolute;z-index:2;inset:0;background:linear-gradient(90deg,#17283e 0%,#17283e 47%,rgba(23,40,62,.8) 60%,transparent 83%);pointer-events:none}
+body:not(:has(#theme-toggle:checked)) #home .daily-insights .amor-aside::before{background:linear-gradient(90deg,#f6fbff 0%,#f6fbff 47%,rgba(246,251,255,.75) 62%,transparent 85%)}
+#home .daily-insights .amor-wave{position:absolute;right:0;bottom:0;width:40%;max-width:none;height:100%;object-fit:cover;object-position:50% 37%;animation:none;transform:none;filter:none}
+#home .daily-insights .amor-bubble{position:absolute;z-index:4;left:55%;top:23%;max-width:23%;width:23%;margin:0;padding:10px 11px;font-size:clamp(9px,1.2vw,12px);color:var(--text);background:rgba(10,24,43,.8);border:1px solid rgba(120,167,208,.25);border-radius:14px;line-height:1.45;box-shadow:none}
+body:not(:has(#theme-toggle:checked)) #home .daily-insights .amor-bubble{background:rgba(255,255,255,.9)}
+@media(max-width:600px){#home .home-v80-copy{top:10%;left:35.5%;width:35%}#home .home-v80-name{font-size:clamp(13px,4vw,23px)}#home .home-v80-status{font-size:clamp(8px,2.2vw,13px);margin-top:7%}#home .home-v80-health{font-size:clamp(7px,1.65vw,10px);gap:4px;margin-bottom:13%}#home .home-v80-health small{margin-top:4px}#home .daily-insights{min-height:180px;padding:15px 40% 15px 14px}#home .daily-insights .amor-wave{width:43%}#home .daily-insights .amor-bubble{left:52%;top:20%;width:23%;max-width:23%;padding:7px;font-size:9px}}
+@media(max-width:380px){#home .home-v80-health{margin-bottom:10%;font-size:7px}#home .home-v80-health>span{display:none}#home .daily-insights .amor-bubble{left:50%;width:25%;max-width:25%;font-size:8px}}
+
 </style>
 <style>
 /* Amor 17: fast entry, non-blocking estimate with explicit uncertainty */
@@ -1574,7 +1600,7 @@ body:has(#theme-toggle:checked) #basket .basket-hero{
 @media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style>
 </head><body><div class="app"><div class="top"><div><div class="hello" id="greeting">Доброе утро! 🌷</div><div class="date" id="date"></div></div><div class="actions"><input aria-label="Ночная тема" id="theme-toggle" style="position:absolute;opacity:0;width:1px;height:1px" type="checkbox"/><label class="iconbtn theme-switch" for="theme-toggle" title="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></label><button class="iconbtn" onclick="alert('Настройки добавим на следующем этапе')" title="Настройки">☰</button></div></div>
-<section class="screen active" id="home"><div aria-label="Утверждённый иллюстративный баннер Кости и Амора" class="hero-reference" role="img"><img alt="Костя и Амор, светлая тема" class="hero-light" src="amor_hero_light.jpg"/><img alt="Костя и Амор, ночная тема" class="hero-dark" src="amor_hero_dark.jpg"/></div><div class="grid vitals-grid">
+<section class="screen active" id="home"><div aria-label="Костя и Амор — главная карточка" class="hero-reference home-v80-hero"><img alt="Костя и Амор" class="hero-light" src="amor_home_clean_light_v80.jpg"/><img alt="Костя и Амор" class="hero-dark" src="amor_home_clean_dark_v80.jpg"/><div class="home-v80-copy"><div class="home-v80-name">Сергеевич</div><div class="home-v80-status">Сегодня всё спокойно</div><div class="home-v80-health"><span aria-hidden="true">❤️</span><div><strong>ЖКТ восстанавливается</strong><small>Продолжайте в том же духе!</small></div></div></div></div><div class="grid vitals-grid">
 <div class="card metric metric-weight"><div class="metric-head"><span class="metric-icon">⚖</span><span class="metric-name">Вес</span></div><div class="metric-main"><span id="weightDisplay">—</span><small> кг</small></div><div class="metric-bottom"><div><div class="metric-change" id="weightDelta">Пока нет сравнения</div><div class="metric-detail" id="weightPrev">Добавь два измерения</div></div></div><div class="spark" hidden="" id="weightSpark"></div></div>
 <div class="card metric metric-waist"><div class="metric-head"><span class="metric-icon">▤</span><span class="metric-name">Талия</span></div><div class="metric-main"><span id="waistDisplay">—</span><small> см</small></div><div class="metric-bottom"><div><div class="metric-change" id="waistDelta">Пока нет сравнения</div><div class="metric-detail" id="waistPrev">Добавь два измерения</div></div></div><div class="spark" hidden="" id="waistSpark"></div></div>
 <div class="card metric metric-sleep"><div class="metric-head"><span class="metric-icon">☾</span><span class="metric-name">Сон</span></div><div class="metric-main" id="sleepDisplay">—</div><div class="metric-bottom"><div><div class="metric-detail">Продолжительность сна</div><span class="quality-pill" id="sleepQuality">Нет записи</span></div><div aria-hidden="true" class="sleep-bars"><i></i><i></i><i></i><i></i></div></div></div>
