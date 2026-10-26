@@ -707,47 +707,52 @@ body:not(:has(#theme-toggle:checked)) #analytics .an-hero-copy{background:rgba(2
 </style>
 
 
-<style id="amor-v53-fixed-compositions">
-/* v53: no UI handlers or storage keys modified. Each mascot is an independent, softly masked layer. */
-#food .food-summary,#basket .basket-hero,#basket .basket-cook,#analytics .an-hero,#meds .med-hero,#food .food-recipes-hero,#food .food-recipe-banner{position:relative!important;isolation:isolate!important;overflow:hidden!important;background-image:none!important}
-#food .food-summary{min-height:244px!important;background:linear-gradient(110deg,#102c3c,#11273d)!important}
-#food .food-summary .food-hero-visual{display:block!important;position:absolute!important;inset:0 0 0 auto!important;width:42%!important;height:100%!important;z-index:0!important;pointer-events:none!important;overflow:hidden!important;opacity:1!important;mask-image:linear-gradient(90deg,transparent 0%,black 28%)!important;-webkit-mask-image:linear-gradient(90deg,transparent 0%,black 28%)!important}
-#food .food-summary .food-hero-visual img{display:block!important;position:absolute!important;right:0!important;bottom:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center center!important}
-#food .food-summary-content{position:relative!important;z-index:2!important;width:69%!important;padding-top:0!important}
-#food .food-hero-message{position:absolute!important;z-index:3!important;right:29%!important;top:18px!important}
-#basket .basket-hero,#basket .basket-cook,#meds .med-hero,#food .food-recipes-hero,#food .food-recipe-banner{background:linear-gradient(110deg,#1b324b 0%,#102638 100%)!important}
-#basket .basket-hero-robot,#meds .med-hero-robot{display:block!important;position:absolute!important;right:0!important;bottom:0!important;width:35%!important;height:100%!important;z-index:1!important;pointer-events:none!important;overflow:hidden!important;mask-image:linear-gradient(90deg,transparent,black 22%)!important;-webkit-mask-image:linear-gradient(90deg,transparent,black 22%)!important}
-#basket .basket-hero-robot img,#meds .med-hero-robot img{display:block!important;position:absolute!important;right:0!important;bottom:0!important;width:100%!important;height:100%!important;object-fit:contain!important;object-position:right bottom!important}
+
+<style id="amor-v54-integrated-scenes">
+/* v54: scene integration; override previous v51-v53 visual rules only */
+#food .food-summary,#basket .basket-hero,#basket .basket-cook,#analytics .an-hero,#meds .med-hero,#food .food-recipes-hero,#food .food-recipe-banner{position:relative!important;isolation:isolate!important;overflow:hidden!important;background:#10243a!important}
+#food .food-summary::before,#basket .basket-hero::before,#basket .basket-cook::before,#analytics .an-hero::before,#meds .med-hero::before,#food .food-recipes-hero::before,#food .food-recipe-banner::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(115deg,#122b43 0%,#0b3042 58%,#0b2839 100%)}
+#food .food-summary::after,#basket .basket-hero::after,#basket .basket-cook::after,#analytics .an-hero::after,#meds .med-hero::after,#food .food-recipes-hero::after,#food .food-recipe-banner::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(9,28,47,.16) 0%,rgba(9,28,47,.04) 55%,transparent 85%)}
+/* Right-hand scenery is part of the card background, not an inline object. */
+#food .food-summary .food-hero-visual{display:block!important;position:absolute!important;right:0!important;left:auto!important;top:0!important;bottom:0!important;width:42%!important;height:100%!important;overflow:hidden!important;z-index:1!important;pointer-events:none!important;opacity:1!important;mask-image:linear-gradient(to right,transparent 0%,black 22%)!important;-webkit-mask-image:linear-gradient(to right,transparent 0%,black 22%)!important}
+#food .food-summary .food-hero-visual img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center 40%!important;position:absolute!important;inset:0!important}
+#food .food-summary-content{position:relative!important;z-index:4!important;width:72%!important;padding:0!important}
+#food .food-hero-message{display:block!important;position:absolute!important;z-index:5!important;top:16px!important;left:auto!important;right:26%!important;max-width:190px!important;pointer-events:none!important}
+#basket .basket-hero-robot,#meds .med-hero-robot{position:absolute!important;inset:0 0 0 auto!important;width:42%!important;height:100%!important;z-index:1!important;pointer-events:none!important;overflow:hidden!important;mask-image:linear-gradient(to right,transparent,black 20%)!important;-webkit-mask-image:linear-gradient(to right,transparent,black 20%)!important}
+#basket .basket-hero-robot img,#meds .med-hero-robot img{display:block!important;position:absolute!important;right:0!important;bottom:0!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:contain!important;object-position:right bottom!important;filter:none!important}
 #basket .basket-hero-robot img.amor-pose-light{display:none!important}
 #basket .basket-hero-robot img.amor-pose-dark{display:block!important}
-#basket .basket-cook>img,#food .food-recipes-hero>img,#food .food-recipe-banner>img{display:block!important;position:absolute!important;right:0!important;bottom:0!important;width:31%!important;height:100%!important;object-fit:contain!important;object-position:right bottom!important;z-index:1!important;pointer-events:none!important;mask-image:linear-gradient(90deg,transparent,black 26%)!important;-webkit-mask-image:linear-gradient(90deg,transparent,black 26%)!important}
+#basket .basket-cook>img,#food .food-recipes-hero>img,#food .food-recipe-banner>img{display:block!important;position:absolute!important;right:0!important;bottom:0!important;width:40%!important;height:100%!important;max-width:none!important;object-fit:contain!important;object-position:right bottom!important;z-index:1!important;pointer-events:none!important;mask-image:linear-gradient(to right,transparent 0%,black 20%)!important;-webkit-mask-image:linear-gradient(to right,transparent 0%,black 20%)!important}
 #basket .basket-cook>img.amor-pose-light{display:none!important}
 #basket .basket-cook>img.amor-pose-dark{display:block!important}
-#analytics .an-hero{background:linear-gradient(105deg,#1b314b,#0d2841)!important}
-#analytics .an-hero>img{display:block!important;position:absolute!important;right:0!important;bottom:0!important;width:42%!important;height:100%!important;object-fit:contain!important;object-position:right bottom!important;z-index:1!important;pointer-events:none!important;mask-image:linear-gradient(90deg,transparent,black 25%)!important;-webkit-mask-image:linear-gradient(90deg,transparent,black 25%)!important}
+#analytics .an-hero>img{display:block!important;position:absolute!important;right:0!important;bottom:0!important;width:43%!important;height:100%!important;object-fit:contain!important;object-position:right bottom!important;z-index:1!important;pointer-events:none!important;mask-image:linear-gradient(to right,transparent 0%,black 22%)!important;-webkit-mask-image:linear-gradient(to right,transparent 0%,black 22%)!important}
 #analytics .an-hero>img.amor-pose-light{display:none!important}
 #analytics .an-hero>img.amor-pose-dark{display:block!important}
-#food .food-summary-content,#basket .basket-hero>div:first-child,#basket .basket-cook>div:first-child,#food .food-recipes-hero>div:first-child,#food .food-recipe-banner>span,#meds .med-hero>div:first-child,#analytics .an-hero-copy{position:relative!important;z-index:3!important}
-#basket .basket-hero>div:first-child,#meds .med-hero>div:first-child{max-width:67%!important}
-#food .food-recipes-hero>img{width:29%!important}
-#analytics .an-hero-chart,#analytics .an-hero-stars{z-index:2!important}
+#basket .basket-hero>div:first-child,#basket .basket-cook>div:first-child,#meds .med-hero>div:first-child,#food .food-recipes-hero>div:first-child,#food .food-recipe-banner>span,#analytics .an-hero-copy{position:relative!important;z-index:4!important;max-width:61%!important}
+#analytics .an-hero-chart,#analytics .an-hero-stars{z-index:3!important}
+#basket .basket-hero,#meds .med-hero{min-height:175px!important}
+#analytics .an-hero{min-height:205px!important}
+#food .food-recipes-hero{min-height:170px!important}
+/* The art in earlier versions had hard rectangular edges; remove them with soft alpha fades. */
+#basket .basket-hero-robot img,#meds .med-hero-robot img,#analytics .an-hero>img,#food .food-recipes-hero>img{border:0!important;border-radius:0!important}
+@media(min-width:800px){#food .food-summary{min-height:248px!important}}
 @media(max-width:700px){
-#food .food-summary{min-height:250px!important}
-#food .food-summary-content{width:72%!important;padding-top:0!important}
-#food .food-summary .food-hero-visual{width:47%!important}
-#food .food-hero-message{display:none!important}
-#basket .basket-hero-robot,#meds .med-hero-robot{width:40%!important}
-#basket .basket-hero>div:first-child,#meds .med-hero>div:first-child{max-width:64%!important}
-#analytics .an-hero>img{width:49%!important}
+ #food .food-summary{min-height:260px!important}
+ #food .food-summary .food-hero-visual{width:47%!important}
+ #food .food-summary-content{width:76%!important}
+ #food .food-hero-message{right:25%!important;max-width:145px!important;font-size:11px!important}
+ #basket .basket-hero-robot,#meds .med-hero-robot{width:44%!important}
+ #basket .basket-hero>div:first-child,#meds .med-hero>div:first-child{max-width:62%!important}
+ #analytics .an-hero>img{width:45%!important}
 }
 @media(max-width:440px){
-#food .food-summary{min-height:275px!important}
-#food .food-summary-content{width:100%!important;padding-top:92px!important}
-#food .food-summary .food-hero-visual{width:54%!important;height:70%!important;top:0!important;bottom:auto!important}
-#food .food-hero-message{display:block!important;left:12px!important;right:auto!important;top:12px!important;max-width:48%!important}
-#basket .basket-hero-robot,#meds .med-hero-robot{width:46%!important}
-#basket .basket-hero>div:first-child,#meds .med-hero>div:first-child{max-width:63%!important}
-#food .food-recipes-hero>img{width:38%!important}
+ #food .food-summary{min-height:280px!important}
+ #food .food-summary-content{width:100%!important;padding-top:90px!important}
+ #food .food-summary .food-hero-visual{width:56%!important;height:100%!important;top:0!important}
+ #food .food-hero-message{top:10px!important;left:12px!important;right:auto!important;max-width:42%!important}
+ #basket .basket-hero-robot,#meds .med-hero-robot{width:49%!important}
+ #basket .basket-hero>div:first-child,#meds .med-hero>div:first-child{max-width:59%!important}
+ #food .food-recipes-hero>img{width:42%!important}
 }
 body.light #basket .basket-hero-robot img.amor-pose-light,body.light #basket .basket-cook>img.amor-pose-light,body.light #analytics .an-hero>img.amor-pose-light{display:block!important}
 body.light #basket .basket-hero-robot img.amor-pose-dark,body.light #basket .basket-cook>img.amor-pose-dark,body.light #analytics .an-hero>img.amor-pose-dark{display:none!important}
