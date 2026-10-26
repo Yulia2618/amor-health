@@ -1051,21 +1051,30 @@ body:has(#theme-toggle:checked) #basket .basket-hero{
  #basket .basket-hero p{font-size:11px!important;max-width:200px!important}
  #basket .basket-hero button{font-size:10px!important;padding:9px 10px!important}
 }
-</style><style id="amor-v69-basket-height">
-/* Match Nutrition's main card height while preserving Basket's artwork and live controls. */
+</style><style id="amor-v70-basket-integrated">
+/* Single clean banner image: no embedded footer text, no exposed image edge. */
 #basket .basket-hero,#basket .basket-hero.card,
 body:has(#theme-toggle:checked) #basket .basket-hero{
- min-height:250px!important;
+ height:250px!important;min-height:250px!important;max-height:250px!important;
+ box-sizing:border-box!important;overflow:hidden!important;isolation:isolate!important;
+ background-color:#142b43!important;
+ background-image:url('amor_basket_hero_v70.jpg')!important;
+ background-repeat:no-repeat!important;
  background-position:center center!important;
- background-size:cover!important;
+ background-size:100% 100%!important;
+ display:flex!important;align-items:center!important;padding:20px!important;
 }
+#basket .basket-hero::before{display:block!important;content:""!important;position:absolute!important;inset:0!important;
+ background:linear-gradient(90deg,rgba(16,39,60,.26) 0%,rgba(16,39,60,.09) 48%,transparent 76%)!important;
+ pointer-events:none!important;z-index:0!important}
+#basket .basket-hero::after{display:none!important}
+#basket .basket-hero>div:first-child{position:relative!important;z-index:2!important;flex:0 0 58%!important;max-width:58%!important}
+#basket .basket-hero-robot{display:none!important}
 @media(max-width:520px){
- #basket .basket-hero,#basket .basket-hero.card,
- body:has(#theme-toggle:checked) #basket .basket-hero{
-  min-height:230px!important;
-  background-position:72% center!important;
- }
- #basket .basket-hero>div:first-child{flex-basis:58%!important;max-width:58%!important}
+ #basket .basket-hero,#basket .basket-hero.card,body:has(#theme-toggle:checked) #basket .basket-hero{
+  height:230px!important;min-height:230px!important;max-height:230px!important;padding:14px!important;
+  background-size:100% 100%!important;background-position:center!important}
+ #basket .basket-hero>div:first-child{flex:0 0 57%!important;max-width:57%!important}
 }
 </style></head><body><div class="app"><div class="top"><div><div class="hello" id="greeting">Доброе утро! 🌷</div><div class="date" id="date"></div></div><div class="actions"><input aria-label="Ночная тема" id="theme-toggle" style="position:absolute;opacity:0;width:1px;height:1px" type="checkbox"/><label class="iconbtn theme-switch" for="theme-toggle" title="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></label><button class="iconbtn" onclick="alert('Настройки добавим на следующем этапе')" title="Настройки">☰</button></div></div>
 <section class="screen active" id="home"><div aria-label="Утверждённый иллюстративный баннер Кости и Амора" class="hero-reference" role="img"><img alt="Костя и Амор, светлая тема" class="hero-light" src="amor_hero_light.jpg"/><img alt="Костя и Амор, ночная тема" class="hero-dark" src="amor_hero_dark.jpg"/></div><div class="grid vitals-grid">
