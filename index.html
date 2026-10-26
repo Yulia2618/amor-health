@@ -705,6 +705,65 @@ body:not(:has(#theme-toggle:checked)) #analytics .an-hero-copy{background:rgba(2
 .daily-insights .amor-wave{object-fit:contain;object-position:right bottom;filter:none}
 @media(max-width:600px){#basket .basket-hero-robot img{width:145px;height:145px}#food .food-summary .amor-food-clean{opacity:.88}}
 </style>
+
+<style id="amor-v52-layered-scenes">
+/* v52: transparent character art lives in the CARD background, not an inset image box. */
+#food .food-summary,#basket .basket-hero,#basket .basket-cook,
+#analytics .an-hero,#meds .med-hero,#food .food-recipes-hero,#food .food-recipe-banner{
+ position:relative!important;isolation:isolate!important;overflow:hidden!important;
+ background-color:#13263d!important;
+ background-repeat:no-repeat!important;
+ background-position:right bottom!important;
+ background-size:auto 100%!important;
+}
+#food .food-summary{
+ background-image:linear-gradient(90deg,#102a3b 0%,rgba(16,42,59,.97) 35%,rgba(16,42,59,.72) 58%,rgba(16,42,59,.04) 92%),url('amor_scene_food.png')!important;
+}
+#basket .basket-hero,#basket .basket-cook{
+ background-image:linear-gradient(90deg,#172c44 0%,rgba(23,44,68,.97) 43%,rgba(23,44,68,.55) 68%,rgba(23,44,68,.04) 100%),url('amor_scene_basket.png')!important;
+}
+#analytics .an-hero{
+ background-image:linear-gradient(90deg,#182e48 0%,rgba(24,46,72,.97) 39%,rgba(24,46,72,.55) 68%,rgba(24,46,72,.04) 100%),url('amor_scene_analytics.png')!important;
+}
+#meds .med-hero{
+ background-image:linear-gradient(90deg,#172d46 0%,rgba(23,45,70,.97) 43%,rgba(23,45,70,.52) 69%,rgba(23,45,70,.04) 100%),url('amor_scene_medicine.png')!important;
+}
+#food .food-recipes-hero{
+ background-image:linear-gradient(90deg,#182d46 0%,rgba(24,45,70,.98) 44%,rgba(24,45,70,.56) 70%,rgba(24,45,70,.04) 100%),url('amor_scene_recipes.png')!important;
+}
+#food .food-recipe-banner{
+ background-image:linear-gradient(90deg,#182d46 0%,rgba(24,45,70,.96) 49%,rgba(24,45,70,.42) 79%,rgba(24,45,70,.05) 100%),url('amor_scene_food.png')!important;
+}
+/* Keep real content and controls above artwork; hide only redundant character <img> elements. */
+#food .food-summary .food-hero-visual,
+#basket .basket-hero .basket-hero-robot,
+#basket .basket-cook>img,
+#analytics .an-hero>img,
+#meds .med-hero .med-hero-robot,
+#food .food-recipes-hero>img,
+#food .food-recipe-banner>img{display:none!important}
+#food .food-summary-content,#food .food-hero-message,
+#basket .basket-hero>div:first-child,#basket .basket-cook>div:first-child,
+#analytics .an-hero-copy,#meds .med-hero>div:first-child,
+#food .food-recipes-hero>div:first-child,#food .food-recipe-banner>span{
+ position:relative!important;z-index:3!important;
+}
+#basket .basket-hero>div:first-child,#meds .med-hero>div:first-child{max-width:66%!important}
+#food .food-summary-content{width:69%!important}
+#food .food-summary{min-height:272px!important}
+#food .food-hero-message{right:28%!important}
+#analytics .an-hero-chart,#analytics .an-hero-stars{z-index:2!important}
+@media(max-width:700px){
+ #food .food-summary{min-height:310px!important;background-size:auto 53%!important;background-position:right top!important;
+  background-image:linear-gradient(180deg,rgba(16,42,59,.15) 0%,#102a3b 54%),linear-gradient(90deg,#102a3b 0%,rgba(16,42,59,.2) 100%),url('amor_scene_food.png')!important}
+ #food .food-summary-content{width:100%!important;padding-top:120px!important}
+ #food .food-hero-message{left:12px!important;right:auto!important;top:14px!important}
+ #basket .basket-hero,#meds .med-hero{background-size:auto 100%!important}
+ #basket .basket-hero>div:first-child,#meds .med-hero>div:first-child{max-width:67%!important}
+ #analytics .an-hero{background-size:auto 100%!important}
+ #food .food-recipes-hero,#food .food-recipe-banner{background-size:auto 100%!important}
+}
+</style>
 </head><body><div class="app"><div class="top"><div><div class="hello" id="greeting">Доброе утро! 🌷</div><div class="date" id="date"></div></div><div class="actions"><input aria-label="Ночная тема" id="theme-toggle" style="position:absolute;opacity:0;width:1px;height:1px" type="checkbox"/><label class="iconbtn theme-switch" for="theme-toggle" title="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></label><button class="iconbtn" onclick="alert('Настройки добавим на следующем этапе')" title="Настройки">☰</button></div></div>
 <section class="screen active" id="home"><div aria-label="Утверждённый иллюстративный баннер Кости и Амора" class="hero-reference" role="img"><img alt="Костя и Амор, светлая тема" class="hero-light" src="amor_hero_light.jpg"/><img alt="Костя и Амор, ночная тема" class="hero-dark" src="amor_hero_dark.jpg"/></div><div class="grid vitals-grid">
 <div class="card metric metric-weight"><div class="metric-head"><span class="metric-icon">⚖</span><span class="metric-name">Вес</span></div><div class="metric-main"><span id="weightDisplay">—</span><small> кг</small></div><div class="metric-bottom"><div><div class="metric-change" id="weightDelta">Пока нет сравнения</div><div class="metric-detail" id="weightPrev">Добавь два измерения</div></div></div><div class="spark" hidden="" id="weightSpark"></div></div>
