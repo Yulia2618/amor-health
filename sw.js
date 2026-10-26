@@ -1,4 +1,4 @@
-const CACHE='amor-static-v44';
+const CACHE='amor-static-v45';
 const ASSETS=['./','./index.html','./amor_hero_light.jpg','./amor_hero_dark.jpg','./amor_wave.png','./food_cottage.jpg','./food_soup.jpg','./food_chicken.jpg','./food_salmon.jpg','./amor_medicine.png','./amor_basket_dark.png','./amor_basket_light.png','./amor_analytics_dark.png','./amor_analytics_light.png','./amor_food_dark.png','./amor_food_light.png','./amor_nutrition_hero.png','./caesar_batat.jpg','./icon-192.png','./icon-512.png','./manifest.webmanifest'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()));});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('amor-static-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
