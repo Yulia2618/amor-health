@@ -622,6 +622,54 @@ body:not(:has(#theme-toggle:checked)) #analytics .an-hero-copy{background:rgba(2
 #food .food-recipe-banner img.amor-food-clean,#food .food-recipes-hero img.amor-food-clean{-webkit-mask-image:none!important;mask-image:none!important}
 #meds .med-hero{min-height:190px!important}#meds .med-hero-robot{height:175px!important}#analytics .an-hero{min-height:190px!important}#basket .basket-hero{min-height:180px!important}#food .food-recipe-banner{min-height:145px!important}#food .food-recipe-banner>span{z-index:2;position:relative}#food .food-recipe-banner img{z-index:1;position:relative}#food .food-rings{position:relative;z-index:2}#food .food-summary{min-height:272px!important}#food .food-hero-visual{right:-4px!important;bottom:-4px!important}#food .food-hero-message{right:27%!important}
 @media(max-width:700px){#food .food-summary{min-height:310px!important}#food .food-hero-visual{right:0!important;top:0!important;bottom:auto!important;height:165px!important;width:51%!important}#food .food-hero-message{left:14px!important;right:auto!important}#meds .med-hero{min-height:160px!important}#meds .med-hero-robot{height:145px!important}}
+</style><style id="amor-v49-art-direction">
+/* v49: quiet, consistent image art direction. Visual-only changes. */
+#food .food-summary,#basket .basket-hero,#basket .basket-cook,#analytics .an-hero,#meds .med-hero,#food .food-recipes-hero{
+  background:linear-gradient(112deg,#182d46 0%,#10253a 48%,#0d2535 100%)!important;
+  border:1px solid rgba(128,173,204,.21)!important;
+  box-shadow:inset 0 1px rgba(255,255,255,.055),0 9px 25px rgba(0,0,0,.1)!important;
+  border-radius:22px!important;overflow:hidden!important;isolation:isolate;
+}
+/* Previous sparkle overlays made the art look assembled. */
+#food .food-summary::before,#basket .basket-hero::before,#basket .basket-cook::before,
+#analytics .an-hero::before,#meds .med-hero::before,#food .food-recipes-hero::before,
+#food .food-summary::after,#basket .basket-hero::after,#basket .basket-cook::after,
+#analytics .an-hero::after,#meds .med-hero::after{display:none!important}
+#food .food-summary{min-height:272px!important}
+#food .food-summary-content{width:69%!important;position:relative;z-index:3!important}
+#food .food-hero-visual{width:37%!important;height:100%!important;top:auto!important;bottom:-1px!important;right:-1px!important;overflow:hidden;z-index:1!important;background:none!important;
+ -webkit-mask-image:linear-gradient(to right,transparent 0%,#000 26%,#000 100%);mask-image:linear-gradient(to right,transparent 0%,#000 26%,#000 100%)}
+#food .food-hero-visual img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:right bottom!important;filter:none!important}
+#food .food-hero-message{right:31%!important;top:16px!important;left:auto!important;z-index:4!important;width:154px!important;max-width:154px!important;padding:10px!important}
+#food .food-rings{position:relative;z-index:3;gap:10px!important}
+#food .food-ring{max-width:85px!important}
+#basket .basket-hero{min-height:172px!important}
+#basket .basket-hero-robot{position:absolute!important;right:3px!important;bottom:-3px!important;width:33%!important;max-width:33%!important;height:163px!important;min-width:0!important;z-index:1!important}
+#basket .basket-hero-robot img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:right bottom!important;filter:none!important}
+#basket .basket-hero>div:first-child{max-width:68%;position:relative;z-index:3}
+#basket .basket-cook>img{width:150px!important;height:125px!important;object-fit:contain!important;filter:none!important}
+#analytics .an-hero{min-height:195px!important}
+#analytics .an-hero>img{width:37%!important;max-width:205px!important;right:1%!important;bottom:-3px!important;height:96%!important;object-fit:contain!important;object-position:right bottom!important;z-index:2!important;filter:none!important}
+#analytics .an-hero-copy{position:relative;z-index:3!important;max-width:265px!important}
+/* Decorative chart overlay must not cross the mascot's face. */
+#analytics .an-chart-a,#analytics .an-chart-b{z-index:1!important;opacity:.52!important}
+#analytics .an-hero-stars{right:37%!important;opacity:.65!important}
+#meds .med-hero{min-height:185px!important}
+#meds .med-hero>div:first-child{position:relative;z-index:3!important;max-width:67%!important}
+#meds .med-hero-robot{position:absolute!important;right:12px!important;bottom:-2px!important;height:170px!important;width:30%!important;max-width:30%!important;flex:none!important;z-index:1!important;overflow:hidden}
+#meds .med-hero-robot img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:right bottom!important;filter:none!important}
+#food .food-recipes-hero>img{max-width:25%!important;object-fit:contain!important;object-position:right bottom!important;filter:none!important}
+@media(max-width:700px){
+ #food .food-summary{min-height:310px!important}
+ #food .food-summary-content{width:100%!important;padding-top:120px!important}
+ #food .food-hero-visual{top:0!important;bottom:auto!important;width:52%!important;height:158px!important}
+ #food .food-hero-message{left:12px!important;right:auto!important;top:14px!important;width:45%!important;max-width:160px!important}
+ #food .food-rings{gap:5px!important}
+ #basket .basket-hero-robot{width:36%!important;max-width:36%!important;height:145px!important}
+ #analytics .an-hero>img{width:41%!important;max-width:41%!important}
+ #meds .med-hero-robot{height:145px!important;width:34%!important;max-width:34%!important;right:3px!important}
+ #meds .med-hero>div:first-child{max-width:70%!important}
+}
 </style></head><body><div class="app"><div class="top"><div><div class="hello" id="greeting">Доброе утро! 🌷</div><div class="date" id="date"></div></div><div class="actions"><input aria-label="Ночная тема" id="theme-toggle" style="position:absolute;opacity:0;width:1px;height:1px" type="checkbox"/><label class="iconbtn theme-switch" for="theme-toggle" title="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></label><button class="iconbtn" onclick="alert('Настройки добавим на следующем этапе')" title="Настройки">☰</button></div></div>
 <section class="screen active" id="home"><div aria-label="Утверждённый иллюстративный баннер Кости и Амора" class="hero-reference" role="img"><img alt="Костя и Амор, светлая тема" class="hero-light" src="amor_hero_light.jpg"/><img alt="Костя и Амор, ночная тема" class="hero-dark" src="amor_hero_dark.jpg"/></div><div class="grid vitals-grid">
 <div class="card metric metric-weight"><div class="metric-head"><span class="metric-icon">⚖</span><span class="metric-name">Вес</span></div><div class="metric-main"><span id="weightDisplay">—</span><small> кг</small></div><div class="metric-bottom"><div><div class="metric-change" id="weightDelta">Пока нет сравнения</div><div class="metric-detail" id="weightPrev">Добавь два измерения</div></div></div><div class="spark" hidden="" id="weightSpark"></div></div>
