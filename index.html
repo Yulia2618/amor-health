@@ -378,6 +378,26 @@ body:not(:has(#theme-toggle:checked)) #home .daily-insights .amor-bubble{backgro
 #home .home-v80-hero .home-v86-art{display:none}
 body:has(#theme-toggle:checked) #home .home-v80-hero .home-v86-art{display:block}
 body:has(#theme-toggle:checked) #home .home-v80-hero>img.hero-light{display:none}
+
+/* v87 — completely rebuilt home banner: live text, round portrait, right mascot */
+#home .home-v87-hero{position:relative;isolation:isolate;aspect-ratio:1308/498;background:#0a1930;overflow:hidden;line-height:normal;border-radius:20px}
+#home .home-v87-bg{position:absolute;inset:0;background:radial-gradient(ellipse 52% 90% at 72% 58%,rgba(22,82,151,.36),transparent 82%),radial-gradient(ellipse 35% 80% at 30% 100%,rgba(14,69,132,.35),transparent 85%),linear-gradient(110deg,#0a1930 0%,#0c2040 56%,#102b48 100%)}
+#home .home-v87-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 100% at 50% 50%,transparent 35%,rgba(4,11,27,.22) 100%)}
+#home .home-v87-portrait{position:absolute;width:27%;height:auto;aspect-ratio:1;object-fit:contain;left:48%;top:12%;z-index:2;filter:drop-shadow(0 0 15px rgba(36,119,225,.35))}
+#home .home-v87-robot{position:absolute;right:-.5%;top:0;height:100%;width:auto;max-width:36%;object-fit:contain;object-position:right bottom;z-index:1}
+#home .home-v87-copy{position:absolute;z-index:3;left:5.5%;top:18%;height:66%;width:45%;display:flex;flex-direction:column;align-items:flex-start;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.22)}
+#home .home-v87-name{font-weight:850;letter-spacing:-.035em;font-size:clamp(20px,4vw,40px);white-space:nowrap}
+#home .home-v87-status{color:#6de779;font-weight:800;font-size:clamp(11px,2.3vw,22px);margin-top:5%;white-space:nowrap}
+#home .home-v87-health{display:flex;gap:9px;margin-top:auto;font-size:clamp(9px,1.65vw,17px);white-space:nowrap;align-items:flex-start}
+#home .home-v87-health>span{font-size:1.35em;line-height:1.15}
+#home .home-v87-health strong{display:block;font-weight:800}
+#home .home-v87-health small{display:block;font-size:.88em;color:#d4dbe9;margin-top:7px}
+body:not(:has(#theme-toggle:checked)) #home .home-v87-hero{background:#eaf4ff}
+body:not(:has(#theme-toggle:checked)) #home .home-v87-bg{background:radial-gradient(ellipse 55% 100% at 76% 55%,#b9dcf8,transparent 85%),linear-gradient(110deg,#eaf4ff,#d6eafb)}
+body:not(:has(#theme-toggle:checked)) #home .home-v87-copy{color:#172840;text-shadow:none}
+body:not(:has(#theme-toggle:checked)) #home .home-v87-health small{color:#425875}
+@media(max-width:600px){#home .home-v87-copy{left:4%;top:15%;width:49%;height:70%}#home .home-v87-name{font-size:clamp(15px,4vw,24px)}#home .home-v87-status{font-size:clamp(9px,2.35vw,14px)}#home .home-v87-health{font-size:clamp(7px,1.8vw,11px);gap:4px}#home .home-v87-health small{margin-top:3px}#home .home-v87-portrait{width:27%;left:48%;top:19%}#home .home-v87-robot{max-width:36%}}
+@media(max-width:390px){#home .home-v87-health>span{display:none}#home .home-v87-health{font-size:7px}}
 </style>
 <style>
 /* Amor 17: fast entry, non-blocking estimate with explicit uncertainty */
@@ -1607,7 +1627,7 @@ body:has(#theme-toggle:checked) #basket .basket-hero{
 @media(max-width:420px){#meds .med-hero{min-height:192px!important}#meds .med-hero::before{background-position:64% center!important}#meds .med-hero>div:first-child{max-width:60%!important}}
 </style>
 </head><body><div class="app"><div class="top"><div><div class="hello" id="greeting">Доброе утро! 🌷</div><div class="date" id="date"></div></div><div class="actions"><input aria-label="Ночная тема" id="theme-toggle" style="position:absolute;opacity:0;width:1px;height:1px" type="checkbox"/><label class="iconbtn theme-switch" for="theme-toggle" title="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></label><button class="iconbtn" onclick="alert('Настройки добавим на следующем этапе')" title="Настройки">☰</button></div></div>
-<section class="screen active" id="home"><div aria-label="Костя и Амор — главная карточка" class="hero-reference home-v80-hero"><img alt="Костя и Амор" class="hero-light" src="amor_home_clean_light_v80.jpg"/><div class="home-v86-art hero-dark" aria-hidden="true"><img class="home-v86-portrait" alt="" src="amor_home_portrait_layer_v86.png"/><img class="home-v86-robot" alt="" src="amor_home_robot_layer_v86.png"/></div><div class="home-v80-copy"><div class="home-v80-name">Сергеевич</div><div class="home-v80-status">Сегодня всё спокойно</div><div class="home-v80-health"><span aria-hidden="true">❤️</span><div><strong>ЖКТ восстанавливается</strong><small>Продолжайте в том же духе!</small></div></div></div></div><div class="grid vitals-grid">
+<section class="screen active" id="home"><div aria-label="Костя и Амор — главная карточка" class="hero-reference home-v87-hero"><div class="home-v87-bg" aria-hidden="true"></div><img class="home-v87-portrait" alt="Портрет Кости" src="amor_home_circle_v87.png"/><img class="home-v87-robot" alt="" src="amor_home_robot_v87.png"/><div class="home-v87-copy"><div class="home-v87-name">Сергеевич</div><div class="home-v87-status">Сегодня всё спокойно</div><div class="home-v87-health"><span aria-hidden="true">❤️</span><div><strong>ЖКТ восстанавливается</strong><small>Продолжайте в том же духе!</small></div></div></div></div><div class="grid vitals-grid">
 <div class="card metric metric-weight"><div class="metric-head"><span class="metric-icon">⚖</span><span class="metric-name">Вес</span></div><div class="metric-main"><span id="weightDisplay">—</span><small> кг</small></div><div class="metric-bottom"><div><div class="metric-change" id="weightDelta">Пока нет сравнения</div><div class="metric-detail" id="weightPrev">Добавь два измерения</div></div></div><div class="spark" hidden="" id="weightSpark"></div></div>
 <div class="card metric metric-waist"><div class="metric-head"><span class="metric-icon">▤</span><span class="metric-name">Талия</span></div><div class="metric-main"><span id="waistDisplay">—</span><small> см</small></div><div class="metric-bottom"><div><div class="metric-change" id="waistDelta">Пока нет сравнения</div><div class="metric-detail" id="waistPrev">Добавь два измерения</div></div></div><div class="spark" hidden="" id="waistSpark"></div></div>
 <div class="card metric metric-sleep"><div class="metric-head"><span class="metric-icon">☾</span><span class="metric-name">Сон</span></div><div class="metric-main" id="sleepDisplay">—</div><div class="metric-bottom"><div><div class="metric-detail">Продолжительность сна</div><span class="quality-pill" id="sleepQuality">Нет записи</span></div><div aria-hidden="true" class="sleep-bars"><i></i><i></i><i></i><i></i></div></div></div>
