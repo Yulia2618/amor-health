@@ -2282,4 +2282,52 @@ render();
 @media(max-width:700px){#meds .med-hero{min-height:210px!important;padding:20px!important}#meds .med-hero>div:first-of-type{width:58%!important;max-width:58%!important;flex-basis:58%!important}#meds .med-hero .med-scene-v79{object-position:58% center!important}}
 @media(max-width:430px){#meds .med-hero{min-height:200px!important;padding:16px!important}#meds .med-hero>div:first-of-type{width:60%!important;max-width:60%!important;flex-basis:60%!important}#meds .med-hero .med-scene-v79{object-position:60% center!important}}
 </style>
+
+<style id="amor-v89-light-contrast-repair">
+/* Light theme: retain the illustrated banners instead of overriding them with pale flat gradients. */
+body:not(:has(#theme-toggle:checked)) #basket .basket-hero,
+body:not(:has(#theme-toggle:checked)) #basket .basket-hero.card {
+ background:#142b43 url('amor_basket_hero_v70.jpg') center center / 100% 100% no-repeat!important;
+ color:#f5faff!important;
+}
+body:not(:has(#theme-toggle:checked)) #basket .basket-hero::before {
+ display:block!important;background:linear-gradient(90deg,rgba(15,35,55,.24),rgba(15,35,55,.08) 55%,transparent 80%)!important;
+}
+body:not(:has(#theme-toggle:checked)) #basket .basket-hero strong{color:#fff!important}
+body:not(:has(#theme-toggle:checked)) #basket .basket-hero p{color:#d2e4f5!important}
+body:not(:has(#theme-toggle:checked)) #basket .basket-cook,
+body:not(:has(#theme-toggle:checked)) #basket .basket-cook.card{
+ background:#102d3a url('amor_chef_kitchen_v66.jpg') center center / cover no-repeat!important;
+ color:#f5faff!important;
+}
+body:not(:has(#theme-toggle:checked)) #basket .basket-cook::before{
+ display:block!important;background:linear-gradient(90deg,#102d3a 0%,rgba(16,45,58,.94) 29%,rgba(16,45,58,.54) 51%,transparent 75%)!important;
+}
+body:not(:has(#theme-toggle:checked)) #basket .basket-cook strong{color:#5bf3a0!important}
+body:not(:has(#theme-toggle:checked)) #basket .basket-cook p{color:#d0e3ef!important}
+/* Keep medicine illustration dark and readable in both themes. */
+body:not(:has(#theme-toggle:checked)) #meds .med-hero,
+body:not(:has(#theme-toggle:checked)) #meds .med-hero.card{
+ background:#162d46!important;color:#fff!important;
+}
+body:not(:has(#theme-toggle:checked)) #meds .med-hero::before{
+ background:url('amor_medicine_hero_v78.jpg') center center / cover no-repeat!important;
+}
+body:not(:has(#theme-toggle:checked)) #meds .med-hero::after{
+ background:linear-gradient(90deg,rgba(22,45,70,.98) 0%,rgba(22,45,70,.92) 32%,rgba(22,45,70,.5) 57%,rgba(22,45,70,0) 83%)!important;
+}
+body:not(:has(#theme-toggle:checked)) #meds .med-hero strong{color:#fff!important;text-shadow:0 1px 3px #071525!important}
+body:not(:has(#theme-toggle:checked)) #meds .med-hero p{color:#e3ecf7!important;text-shadow:0 1px 2px #071525!important}
+/* Advice card has an intentionally dark scenic background; force legible light copy. */
+body:not(:has(#theme-toggle:checked)) #analytics .an-insight,
+body:not(:has(#theme-toggle:checked)) #analytics .an-insight h2,
+body:not(:has(#theme-toggle:checked)) #analytics .an-insight #anAdvice{
+ color:#f5faff!important;
+}
+body:not(:has(#theme-toggle:checked)) #analytics .an-insight>.mini{color:#c6d7e8!important}
+@media(max-width:520px){
+ body:not(:has(#theme-toggle:checked)) #basket .basket-hero{background-position:65% center!important}
+ body:not(:has(#theme-toggle:checked)) #basket .basket-cook::before{background:linear-gradient(90deg,#102d3a 0%,rgba(16,45,58,.95) 36%,rgba(16,45,58,.4) 65%,transparent 85%)!important}
+}
+</style>
 </body></html>
